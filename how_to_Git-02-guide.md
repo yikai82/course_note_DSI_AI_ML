@@ -1,13 +1,19 @@
-# Module 2 – Let's Git 🤓 Part 2 
+# Module 2 – Let's Git 🤓 Part 2
 
-### This covers the exercise on the day 2 and day 3 after setup 
-Tips: use 'git status', 'git log', 'git remote -v', 'git branch -v' to check the status often
+
+### This note covers the exercise on the day 2 and day 3 after the setup 
+
+## Important Concepts: 
+1. Use 'git status', 'git log', 'git remote -v', 'git branch -v' to check the status often
+2. git can only track the file, not folder  
+
+
 
 ## 1. Create a Local Git Repo and Link It to GitHub (Day 2)
-Below is an example of creating a local repo called `test_repo` and linking it to GitHub following the day 2 git in-class example
+To create a local repo called `test_repo` and linking it to GitHub during the day 2 git in-class exercise: 
 
 ```bash
-cd 01_GitHub/test/            # path to work directory
+cd path to work            # path to work directory
 mkdir test_repo
 cd test_repo
 git init -b main              # Initialize with main as the default branch
@@ -25,8 +31,11 @@ git remote -v
 ---
 
 ## 2. Fork a Git Repo from GitHub and Sync to a Local Folder (Day 2)
-This is very staight forward, to fork a Git repo, just follow this guide:  
-  👉 [UofT DSI Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#setting-up)
+Just follow this guide and/or watch the vidoe
+ 👉 [UofT DSI Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#setting-up)
+ 👉 How to Fork a Repository [Link to Youtube](https://youtu.be/H-8kzcQWJ7U)
+ 👉 How to Submit an Assignment [LInk to Youtube](https://youtu.be/gXtxb0ECs2A)
+
 
 To clone your forked repo into a local folder:
 
@@ -75,7 +84,7 @@ upstream        https://github.com/dtxe/dsi_guacamole.git (fetch)
 upstream        https://github.com/dtxe/dsi_guacamole.git (push)
 ```
 
-Now push the origin to fix-avocados 
+Now push the origin to fix-avocados: 
 ```bash
 git push -u origin fix-avocados
 git push origin main # if your've forked already, you will have a origin main that you can push if needed
@@ -93,7 +102,6 @@ git push fix-avocados
 
 ## 4. Merge/Pull other document from Git Repo (Day 3)
 ### Background 
-
 This is an example from the day 3 git course when a document needs to be pulled/merged from different source (big batch), and how to troubleshoot. Just follow the command in the previous section to setup upstream.  Follow the command below to create a situation. This  
 
 ```bash
@@ -164,20 +172,39 @@ git pull --no-rebase # to solve any conflict if there is any
 git branch -vv
  
 ```
-### I totally lost here so...
+### I totally lost here so... 🚧 🚧 🚧
 
 
 ---
 
-## Other useful information from internet 
+## 6. Situation Room 🚨
 
-### Save (Stash) Local Work First, Then Sync with GitHub
+### Situation 1: You have a repo on GitHub and a local folder. You made a mistake, and now the local folder and the repo on GitHub are no longer in sync because of the conflict. You want to preserve the repo one on GitHub
 
-If you’ve made changes in a local working directory and want to pull updates from GitHub first, the strategy is:
+Possible triggers: 
+(1) Delete a folder (containing files) on a GitHub repo, and you modified the same file in the local. Now, the GitHub repo it is gone, the local repo says you need to commit and push a change, which you have no place to push. 
 
-**1. Stash local work**  
-**2. Pull from GitHub**  
-**3. Reapply local changes**
+`Solution` : Since you want to preserve the GitHub Repo. Remove (or be safer, just rename) the local repo to a different name (ex, my repo -> my_repo_delete) and re-clone the repo from GitHub using:
+
+```bash
+git clone [url] 
+```
+It will create a new 'my repo" and everything is reset. 
+
+--
+### Situation 2: You create a clone of someone's repo and create a local repo. You editted a document. You learned that there are new updates from the upstream so you decide to pull. Now you've got an error:
+```bash
+Updating 09ffdf8..6fa9163
+error: Your local changes to the following files would be overwritten by merge:
+        02_activities/assignments/assignment.sh
+Please commit your changes or stash them before you merge.
+Aborting
+```
+
+Possible trigger: You work on the file.py and the upstream has a new dataset uploaded. It also have an older version of file.py.
+You already edit the older version of file.py. If you pull, you risk overwriting your editted file
+
+`Solution` : **(1) Stash local work**, **(2) Pull from GitHub**, **(3) Reapply local changes**
 
 ```bash
 cd ./path/to/your/work/directory
@@ -192,6 +219,31 @@ git stash list            # View saved stashes
 git stash pop             # Reapply stashed changes
 ```
 
+--
+### Situation 3: You create a clone of with the name 'FUN', and now you want to rename it to 'fun". The Repo FUN also has a local repo 'fun'. The rename is case-senstive and you worry it might trigger errors later 
+
+`Solution` : **(1)Switch to a different branch temporarily**, **(2)Rename the branch 'Fun' to [temp-branch]**, **(3) Rename [temp-branch] to 'fun'**, **(4)Delete the old branch 'FUN'**
+
+```bash
+git branch -m FUN temp-branch       # Rename to something else temporarily
+git branch -m temp-branch fun       # Then rename to final lowercase name
+git push origin -u assignment       # Push the new branch to remote and set it to track origin
+git push origin --delete FUN        # Delete the old branch from the remote (optional but recommended):
+```
+
+### Situation 4: You want to pull a remote branch to the local repo that you've setup already. This is a case similar to the big-batch. However, you are also confused about how many branches you have locally or remotely
+
+```bash
+git clone [url] # Clone an online GitHub repo to local, the local repo is likely called 'main'
+                # From GitHub, you know it has a separate branch 'new-branch 
+git pull [origin]/[upstream] [branch.name]  # Depending on the setting, need to define if origin or upstream 
+git pull origin -u [branch.name]        # Push the new branch to remote and set it to track origin:
+git branch -d [local_branch_name]       # delete unwanted branch      
+git branch -v                           # check local branch
+git branch -vv                          # check the local branch and give more details 
+git branch -r                           # check remote branch 
+
+
 ---
 
 ### ✅ Proper Way to Switch and Track a Remote Branch
@@ -201,6 +253,9 @@ git fetch origin
 git switch [branch-name]
 git branch --set-upstream-to=origin/[branch-name]
 git push -u origin [branch-name]
+
+
+
 ```
 
 
