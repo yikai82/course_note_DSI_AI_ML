@@ -242,7 +242,7 @@ git branch -d [local_branch_name]       # delete unwanted branch
 git branch -v                           # check local branch
 git branch -vv                          # check the local branch and give more details 
 git branch -r                           # check remote branch 
-
+```
 
 ---
 
@@ -253,10 +253,9 @@ git fetch origin
 git switch [branch-name]
 git branch --set-upstream-to=origin/[branch-name]
 git push -u origin [branch-name]
-
-
-
 ```
+
+
 
 
 ---
