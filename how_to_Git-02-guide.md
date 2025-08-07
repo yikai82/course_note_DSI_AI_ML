@@ -1,7 +1,7 @@
 # Module 2 – Let's Git 🤓 Part 2
 
 
-### This note covers the exercise on the day 2 and day 3 after the setup 
+## This note covers the exercise on the day 2 and day 3 after the setup 
 
 ## Important Concepts: 
 1. Use 'git status', 'git log', 'git remote -v', 'git branch -v' to check the status often
@@ -192,7 +192,7 @@ git clone [url]
 It will create a new 'my repo" and everything is reset. 
 
 --
-### Situation 2: You create a clone of someone's repo and create a local repo. You editted a document. You learned that there are new updates from the upstream so you decide to pull. Now you've got an error:
+### Situation 2: You cloned of someone's repo on GitHub and created a local repo. Then, you also editted a document. You learned that there are new updates from the upstream so you decide to pull. Now you've got an error:
 ```bash
 Updating 09ffdf8..6fa9163
 error: Your local changes to the following files would be overwritten by merge:
@@ -201,7 +201,7 @@ Please commit your changes or stash them before you merge.
 Aborting
 ```
 
-Possible trigger: You work on the file.py and the upstream has a new dataset uploaded. It also have an older version of file.py.
+Possible trigger: You work on the file xxxxx.xx and the upstream has a new dataset uploaded. It also have an older version of file.py.
 You already edit the older version of file.py. If you pull, you risk overwriting your editted file
 
 `Solution` : **(1) Stash local work**, **(2) Pull from GitHub**, **(3) Reapply local changes**
@@ -220,7 +220,57 @@ git stash pop             # Reapply stashed changes
 ```
 
 --
-### Situation 3: You create a clone of with the name 'FUN', and now you want to rename it to 'fun". The Repo FUN also has a local repo 'fun'. The rename is case-senstive and you worry it might trigger errors later 
+### Situation 3: You forked the DSI/sql already and also created a branch assignment on GitHub. Then you created a local repo (/path/to/work/sql). From GitHub, you know that both your main branch and assignment branch have new updates. You want the new updates to apply to your local repo and the assignment branch. You want to update everything using the terminal 
+
+```bash
+cd path/to/work/directory/sql
+git status                      # it should point to the assignment branch 
+git remote -v                   # check the remote setting
+git remote add upstream [url]   # set up the upstream
+git log [branch/name]           # if no branch name is given, it will output you current head 
+git log upstream/main           # upstream/main is where I assigned for the UofT-DSI/sql 
+git log assignment..upstream/main  # this will show if there is any different, if it is return empty, you should be good. 
+## If there is difference 
+git fetch upstream main
+git pull upstream main          # you will see conflict message
+git pull --no-rebase upstream main # this will download the update to you local repo
+git push                        # this will push update to your repo assignment on GitHub 
+```
+Shared my git log ouput: 
+```bash
+$ git log
+commit c6866b50a78e96433e0079be51356372639bc74a (HEAD -> assignment, origin/assignment)
+Merge: 084a71f 47bbd0b
+Author: yikai82 <yikai.su89@gmail.com>
+Date:   Wed Aug 6 23:06:57 2025 -0400
+
+    Merge branch 'main' of https://github.com/UofT-DSI/sql into assignment
+
+commit 47bbd0b190d5b60ef1f185c2826f3f2e6af787fa (upstream/main)
+Merge: e95bd72 b5eb495
+Author: CODE, POTATO <t.rose.github@protonmail.com>
+Date:   Wed Aug 6 21:43:40 2025 -0400
+
+    Merge branch 'main' of https://github.com/UofT-DSI/sql
+
+commit e95bd72edc7f836762c7c34b2a5776c6a781a7e2
+Author: CODE, POTATO <t.rose.github@protonmail.com>
+Date:   Wed Aug 6 21:43:34 2025 -0400
+
+    in class code for session 2!
+
+commit 084a71fa2661ef83432ee708fae16928b626b4ef
+Merge: 2fc3737 b5eb495
+Author: yikai82 <yikai.su89@gmail.com>
+Date:   Wed Aug 6 18:14:27 2025 -0400
+
+    Merge branch 'main' of https://github.com/UofT-DSI/sql into assignment
+
+
+```
+
+--
+### Situation 4: You create a clone of with the name 'FUN', and now you want to rename it to 'fun". The Repo FUN also has a local repo 'fun'. The rename is case-senstive and you worry it might trigger errors later 
 
 `Solution` : **(1)Switch to a different branch temporarily**, **(2)Rename the branch 'Fun' to [temp-branch]**, **(3) Rename [temp-branch] to 'fun'**, **(4)Delete the old branch 'FUN'**
 
@@ -231,7 +281,7 @@ git push origin -u assignment       # Push the new branch to remote and set it t
 git push origin --delete FUN        # Delete the old branch from the remote (optional but recommended):
 ```
 
-### Situation 4: You want to pull a remote branch to the local repo that you've setup already. This is a case similar to the big-batch. However, you are also confused about how many branches you have locally or remotely
+### Situation 5: You want to pull a remote branch to the local repo that you've setup already. This is a case similar to the big-batch. However, you are also confused about how many branches you have locally or remotely
 
 ```bash
 git clone [url] # Clone an online GitHub repo to local, the local repo is likely called 'main'
