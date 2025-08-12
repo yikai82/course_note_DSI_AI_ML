@@ -8,12 +8,12 @@ Description:	Kubuntu-T2 24.04.2 LTS
 Release:	24.04
 Codename:	noble
 
-
+---
 ## Important Concepts: 
 1. Use 'git status', 'git log', 'git remote -v', 'git branch -v' to check the status often
 2. git can only track the file, not folder  
 
-
+---
 ## 1. Create a Local Git Repo and Link It to GitHub (Day 2)
 To create a local repo called `test_repo` and linking it to GitHub during the day 2 git in-class exercise: 
 
@@ -36,9 +36,9 @@ git remote -v
 ---
 ## 2. Fork a Git Repo from GitHub and Sync to a Local Folder (Day 2)
 Just follow this guide and/or watch the vidoe
- 👉 [UofT DSI Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#setting-up)
- 👉 How to Fork a Repository [Link to Youtube](https://youtu.be/H-8kzcQWJ7U)
- 👉 How to Submit an Assignment [LInk to Youtube](https://youtu.be/gXtxb0ECs2A)
+- [UofT DSI Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#setting-up)
+- [How to Fork a Repository](https://youtu.be/H-8kzcQWJ7U)
+- [How to Submit an Assignment](https://youtu.be/gXtxb0ECs2A)
 
 
 To clone your forked repo into a local folder:
@@ -49,7 +49,6 @@ git clone [repository_url] [new_dir]     # Clone and rename the directory
 ```
 
 ---
-
 ## 3. Restore a document from other GitHub Repo (Day 3)
 ### Background
 Someone accidentally delete the avocado from the guacamole recipe, let's fix it. 
@@ -103,7 +102,6 @@ git push fix-avocados
 ```
 
 ---
-
 ## 4. Merge/Pull other document from Git Repo (Day 3)
 ### Background 
 This is an example from the day 3 git course when a document needs to be pulled/merged from different source (big batch), and how to troubleshoot. Just follow the command in the previous section to setup upstream.  Follow the command below to create a situation. This  
@@ -151,11 +149,11 @@ git add guacamole.md
 git commit 
 git push 
 ```
+
 ---
 ## 5. Cohort7 ---not complete yet
 ### Background
 The instructor was simulating a chaos situation where multiple people working on the same document in an industry setting. 
-
 
 ```bash
 ## clone the cohort7 playground
@@ -187,7 +185,7 @@ git branch -vv
 Possible triggers: 
 (1) Delete a folder (containing files) on a GitHub repo, and you modified the same file in the local. Now, the GitHub repo it is gone, the local repo says you need to commit and push a change, which you have no place to push. 
 
-`Solution` : Since you want to preserve the GitHub Repo. Remove (or be safer, just rename) the local repo to a different name (ex, my repo -> my_repo_delete) and re-clone the repo from GitHub using:
+**Solution:** Since you want to preserve the GitHub Repo. Remove (or be safer, just rename) the local repo to a different name (ex, my repo -> my_repo_delete) and re-clone the repo from GitHub using:
 
 ```bash
 git clone [url] 
@@ -196,6 +194,7 @@ It will create a new 'my repo" and everything is **reset**.
 
 --
 ### Situation 2: You cloned of someone's repo on GitHub and created a local repo. Then, you also editted a document. You learned that there are new updates from the upstream so you decide to pull. Now you've got an error:
+
 ```bash
 Updating 09ffdf8..6fa9163
 error: Your local changes to the following files would be overwritten by merge:
@@ -207,7 +206,7 @@ Aborting
 Possible trigger: You work on the file xxxxx.xx and the upstream has a new dataset uploaded. It also have an older version of file.py.
 You already edit the older version of file.py. If you pull, you risk overwriting your editted file
 
-`Solution` : **(1) Stash local work**, **(2) Pull from GitHub**, **(3) Reapply local changes**
+**Solution: (1) Stash local work, (2) Pull from GitHub, (3) Reapply local changes**
 
 ```bash
 cd ./path/to/your/work/directory
@@ -225,6 +224,8 @@ git stash pop             # Reapply stashed changes
 --
 ### Situation 3: You forked the DSI/sql already and also created a branch assignment on GitHub. Then you created a local repo (/path/to/work/sql). From GitHub, you know that both your main branch and assignment branch have new updates. You want the new updates to apply to your local repo and the assignment branch. You want to update everything using the terminal 
 
+**Solution:**
+
 ```bash
 cd path/to/work/directory/sql
 git status                      # it should point to the assignment branch 
@@ -241,6 +242,7 @@ git push                        # this will push update to your repo assignment 
 ```
 
 Share my git log ouput: 
+
 ```bash
 $ git log
 commit c6866b50a78e96433e0079be51356372639bc74a (HEAD -> assignment, origin/assignment)
@@ -273,7 +275,9 @@ Date:   Wed Aug 6 18:14:27 2025 -0400
 
 ```
 ### Later, you learn that the branch name 'assignment' needs to be renamed to assignment-one
-`Solution`: Rename the oen on the GitHub, and then update the local repo
+
+**Solution:** Rename the oen on the GitHub, and then update the local repo
+
 ```bash
 git status # check your HEAD
 git switch [branch.name]  # move HEAD to branch assignment 
@@ -286,7 +290,7 @@ git branch -m assignment assignment-one
 --
 ### Situation 4: You create a clone of with the name 'FUN', and now you want to rename it to 'fun". The Repo FUN also has a local repo 'fun'. The rename is case-senstive and you worry it might trigger errors later 
 
-`Solution` : **(1)Switch to a different branch temporarily**, **(2)Rename the branch 'Fun' to [temp-branch]**, **(3) Rename [temp-branch] to 'fun'**, **(4)Delete the old branch 'FUN'**
+**Solution: (1)Switch to a different branch temporarily, (2)Rename the branch 'Fun' to [temp-branch], (3) Rename [temp-branch] to 'fun, (4)Delete the old branch 'FUN'**
 
 ```bash
 git branch -m FUN temp-branch       # Rename to something else temporarily
@@ -296,6 +300,8 @@ git push origin --delete FUN        # Delete the old branch from the remote (opt
 ```
 
 ### Situation 5: You want to pull a remote branch to the local repo that you've setup already. This is a case similar to the big-batch. However, you are also confused about how many branches you have locally or remotely
+
+**Solution:**
 
 ```bash
 git clone [url] # Clone an online GitHub repo to local, the local repo is likely called 'main'
@@ -310,12 +316,26 @@ git branch -rv                          # check remote branch + more details
 ```
 
 ---
-### Situation 6: How to remove an unwanted branch repo on GitHub and local repo
+### Situation 6: Reset the HEAD to the previous time point
+Strigger: You edit a script and realize nothing work so you just want to revert the file to the previous stage (i.e., like the version control in microsoft word or excel)
+**Note: The hard reset will erase everything including the commit commend**  
+**Solution:**
+
+```bash
+git status
+git log                     # to retrieve the commit# 
+git branch -vv              # make sure you are in the current branch
+git reset --hard [commit#]  # reset HEAD
+git push force              # force the change to the GitHub
+```
+
+---
+### Situation 7: How to remove an unwanted branch repo on GitHub and local repo
 
 
 
 
-
+---
 ### ✅ Proper Way to Switch and Track a Remote Branch
 
 ```bash
@@ -329,6 +349,5 @@ git push -u origin [branch-name]
 
 
 ---
-
 ### 📚 Other References:
 1. [U of T DSI GitHub Cheatsheet](https://github.com/UofT-DSI/git/blob/main/01_materials/git_cheatsheet.md)
