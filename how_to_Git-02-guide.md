@@ -3,10 +3,15 @@
 
 ## This note covers the exercise on the day 2 and day 3 after the setup 
 
+##  System
+Description:	Kubuntu-T2 24.04.2 LTS
+Release:	24.04
+Codename:	noble
+
+
 ## Important Concepts: 
 1. Use 'git status', 'git log', 'git remote -v', 'git branch -v' to check the status often
 2. git can only track the file, not folder  
-
 
 
 ## 1. Create a Local Git Repo and Link It to GitHub (Day 2)
@@ -29,7 +34,6 @@ git remote -v
 ```
 
 ---
-
 ## 2. Fork a Git Repo from GitHub and Sync to a Local Folder (Day 2)
 Just follow this guide and/or watch the vidoe
  👉 [UofT DSI Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#setting-up)
@@ -147,7 +151,7 @@ git add guacamole.md
 git commit 
 git push 
 ```
-
+---
 ## 5. Cohort7 ---not complete yet
 ### Background
 The instructor was simulating a chaos situation where multiple people working on the same document in an industry setting. 
@@ -172,14 +176,13 @@ git pull --no-rebase # to solve any conflict if there is any
 git branch -vv
  
 ```
-### I totally lost here so... 🚧 🚧 🚧
+### I am totally lost here so... 🚧 🚧 🚧
 
 
 ---
+## Situation Room 🚨
 
-## 6. Situation Room 🚨
-
-### Situation 1: You have a repo on GitHub and a local folder. You made a mistake, and now the local folder and the repo on GitHub are no longer in sync because of the conflict. You want to preserve the repo one on GitHub
+### Situation 1: You mess around a local folder that is tracked by git on GitHub and you desperately want to reset every thing on your local machine. For example, You have a repo on GitHub that is synced with a local folder. You made a mistake, and now the local folder and the repo on GitHub are no longer in sync because of a conflict. You want to preserve the repo that is on GitHub.  
 
 Possible triggers: 
 (1) Delete a folder (containing files) on a GitHub repo, and you modified the same file in the local. Now, the GitHub repo it is gone, the local repo says you need to commit and push a change, which you have no place to push. 
@@ -189,7 +192,7 @@ Possible triggers:
 ```bash
 git clone [url] 
 ```
-It will create a new 'my repo" and everything is reset. 
+It will create a new 'my repo" and everything is **reset**. 
 
 --
 ### Situation 2: You cloned of someone's repo on GitHub and created a local repo. Then, you also editted a document. You learned that there are new updates from the upstream so you decide to pull. Now you've got an error:
@@ -236,7 +239,8 @@ git pull upstream main          # you will see conflict message
 git pull --no-rebase upstream main # this will download the update to you local repo
 git push                        # this will push update to your repo assignment on GitHub 
 ```
-Shared my git log ouput: 
+
+Share my git log ouput: 
 ```bash
 $ git log
 commit c6866b50a78e96433e0079be51356372639bc74a (HEAD -> assignment, origin/assignment)
@@ -268,6 +272,16 @@ Date:   Wed Aug 6 18:14:27 2025 -0400
 
 
 ```
+### Later, you learn that the branch name 'assignment' needs to be renamed to assignment-one
+`Solution`: Rename the oen on the GitHub, and then update the local repo
+```bash
+git status # check your HEAD
+git switch [branch.name]  # move HEAD to branch assignment 
+git branch -m assignment-one # if you are on branch assignment
+# if you are on a differenet branch
+git branch -m assignment assignment-one
+
+``` 
 
 --
 ### Situation 4: You create a clone of with the name 'FUN', and now you want to rename it to 'fun". The Repo FUN also has a local repo 'fun'. The rename is case-senstive and you worry it might trigger errors later 
@@ -289,12 +303,18 @@ git clone [url] # Clone an online GitHub repo to local, the local repo is likely
 git pull [origin]/[upstream] [branch.name]  # Depending on the setting, need to define if origin or upstream 
 git pull origin -u [branch.name]        # Push the new branch to remote and set it to track origin:
 git branch -d [local_branch_name]       # delete unwanted branch      
-git branch -v                           # check local branch
-git branch -vv                          # check the local branch and give more details 
-git branch -r                           # check remote branch 
+git branch -v                           # check local branchs
+git branch -vv                          # check local branch + more details 
+git branch -r                           # check remote branch
+git branch -rv                          # check remote branch + more details
 ```
 
 ---
+### Situation 6: How to remove an unwanted branch repo on GitHub and local repo
+
+
+
+
 
 ### ✅ Proper Way to Switch and Track a Remote Branch
 
