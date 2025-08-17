@@ -1,17 +1,35 @@
 # Module 2 – Let's Git 🤓 Part 2
 
-
 ## This note covers the exercise on the day 2 and day 3 after the setup 
 
-##  System
+* [Key Note and Important Concept](#key-note-and-important-concept)
+* [1. Create a Local Git Repo and Link It to GitHub (Day 2)](#1-create-a-local-git-repo-and-link-it-to-github-day-2)
+* [2. Fork a Git Repo from GitHub and Sync to a Local Folder (Day 2)](#2-fork-a-git-repo-from-github-and-sync-to-a-local-folder-day-2)
+* [3. Restore a document from other GitHub Repo (Day 3)](#3-restore-a-document-from-other-github-repo-day-3)
+* [4. Merge/Pull other document from Git Repo (Day 3)](#4-mergepull-other-document-from-git-repo-day-3)
+* [5. Cohort7 -production level madness](#5-cohort7--production-level-madness)
+* [Situation Room 🚨](#situation-room-)
+
+
+## System
 Description:	Kubuntu-T2 24.04.2 LTS
 Release:	24.04
 Codename:	noble
 
 ---
-## Important Concepts: 
-1. Use 'git status', 'git log', 'git remote -v', 'git branch -v' to check the status often
-2. git can only track the file, not folder  
+## Key Note and Important Concept: 
+1. Use `git status`, `git log`, `git remote -vv`, `git branch -a`, `git branch -vv`, `git branch -rv` to check the status often
+2. git can only track the file, not folder
+3. **DO NOT** get confused your *local repo* and your *remote repo*: These are total two different things. 
+    Type: 
+    ```Bash
+    git log 
+    ```
+    Terminal Output:
+    ```bash
+    "HEAD -> assignment-two, origin/assignment-two, origin/assignment-one, assignment-one".
+    ```
+    You HEAD point to assignment-two. You have a total of **four branches**, assignment-one and assignment-two are your local branches, while origin/assignment-one and origin/assignment-two are your remote branches on GitHub.
 
 ---
 ## 1. Create a Local Git Repo and Link It to GitHub (Day 2)
@@ -39,7 +57,6 @@ Just follow this guide and/or watch the vidoe
 - [UofT DSI Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#setting-up)
 - [How to Fork a Repository](https://youtu.be/H-8kzcQWJ7U)
 - [How to Submit an Assignment](https://youtu.be/gXtxb0ECs2A)
-
 
 To clone your forked repo into a local folder:
 
@@ -79,7 +96,7 @@ git remote add origin https://github.com/yikai82/dsi_guacamole.git  # add new or
 git remote -v
 ```
 
-The terminal should have the correct output as below. You will have upstream (point the dtxe) and origin (on your own github):
+The terminal should have the correct output as below. You will have upstream (point the dtxe) and origin (on your own GitHub):
 ```bash
 origin  https://github.com/yikai82/dsi_guacamole.git (fetch)
 origin  https://github.com/yikai82/dsi_guacamole.git (push)
@@ -151,7 +168,7 @@ git push
 ```
 
 ---
-## 5. Cohort7 ---not complete yet
+## 5. Cohort7 -production level madness
 ### Background
 The instructor was simulating a chaos situation where multiple people working on the same document in an industry setting. 
 
@@ -180,12 +197,13 @@ git branch -vv
 ---
 ## Situation Room 🚨
 
-### Situation 1: You mess around a local folder that is tracked by git on GitHub and you desperately want to reset every thing on your local machine. For example, You have a repo on GitHub that is synced with a local folder. You made a mistake, and now the local folder and the repo on GitHub are no longer in sync because of a conflict. You want to preserve the repo that is on GitHub.  
+### Situation 1: You mess around a local folder that is tracked by git on GitHub and you desperately want to reset every thing on your GitHub repo 
+**Background:** I have a repo on GitHub that is synced with a local folder. I edited the file locally but later I deleted the whole folder on GitHub. Now the local folder and the remote repo on GitHub are no longer in sync because of this conflict. 
 
-Possible triggers: 
-(1) Delete a folder (containing files) on a GitHub repo, and you modified the same file in the local. Now, the GitHub repo it is gone, the local repo says you need to commit and push a change, which you have no place to push. 
+*Possible triggers:* 
+(1) Deleted a folder (containing files) on a GitHub repo while modifying the same file locally. Now, the GitHub repo it is gone, the local repo says you need to commit and push a change, which you have no place to push. 
 
-**Solution:** Since you want to preserve the GitHub Repo. Remove (or be safer, just rename) the local repo to a different name (ex, my repo -> my_repo_delete) and re-clone the repo from GitHub using:
+**Solution:** (1) **Rename** the local repo to a different name (ex, my repo -> my_repo_delete), (2) **Re-clone** the repo from GitHub using:
 
 ```bash
 git clone [url] 
@@ -193,7 +211,8 @@ git clone [url]
 It will create a new 'my repo" and everything is **reset**. 
 
 --
-### Situation 2: You cloned of someone's repo on GitHub and created a local repo. Then, you also editted a document. You learned that there are new updates from the upstream so you decide to pull. Now you've got an error:
+### Situation 2: You got an error when you try to pull an update. You are worried that the pull will overwrite your local edited files.
+ **Background:** You cloned of someone's repo on GitHub and created a local repo. Then, you also edited a document. You learned that there are new updates from the upstream so you decide to pull. Now you've got an error below. If you pull, you risk overwriting your edited file
 
 ```bash
 Updating 09ffdf8..6fa9163
@@ -203,10 +222,10 @@ Please commit your changes or stash them before you merge.
 Aborting
 ```
 
-Possible trigger: You work on the file xxxxx.xx and the upstream has a new dataset uploaded. It also have an older version of file.py.
-You already edit the older version of file.py. If you pull, you risk overwriting your editted file
+*Possible trigger:* You work on the file called assignment1.sh. The new slides are updated in the upstream. It also have an blank assignment.sh. If you pull, you might lose your progress on assignment1.sh
 
 **Solution: (1) Stash local work, (2) Pull from GitHub, (3) Reapply local changes**
+**Before doing anything, you can also save the file in a different folder that is not tracked by git.**
 
 ```bash
 cd ./path/to/your/work/directory
@@ -222,27 +241,27 @@ git stash pop             # Reapply stashed changes
 ```
 
 --
-### Situation 3: You forked the DSI/sql already and also created a branch assignment on GitHub. Then you created a local repo (/path/to/work/sql). From GitHub, you know that both your main branch and assignment branch have new updates. You want the new updates to apply to your local repo and the assignment branch. You want to update everything using the terminal 
+### Situation 3: You want the new updates from a upstream to sync to your local and remote repo using Terminal  
+**Background:** You forked the DSI/sql and created a branch assignment GitHub already. Then you created a local repo (/path/to/work/sql). From GitHub, you know that both your main branch and assignment branch have new updates. You want the new updates to apply to your local repo and the remote assignment branch. You want to update everything using Terminal. 
 
 **Solution:**
 
 ```bash
 cd path/to/work/directory/sql
-git status                      # it should point to the assignment branch 
-git remote -v                   # check the remote setting
-git remote add upstream [url]   # set up the upstream
-git log [branch/name]           # if no branch name is given, it will output you current head 
-git log upstream/main           # upstream/main is where I assigned for the UofT-DSI/sql 
-git log assignment..upstream/main  # this will show if there is any different, if it is return empty, you should be good. 
+git status                          # it should point to the assignment branch 
+git remote -v                       # check the remote setting
+git remote add upstream [url]       # set up the upstream
+git log [branch/name]               # if no branch name is given, it will output you current HEAD 
+git log upstream/main               # upstream/main is where I assigned for the UofT-DSI/sql 
+git log assignment..upstream/main   # this will show if there is any different, if it is return empty, you should be good. 
 ## If there is difference 
 git fetch upstream main
-git pull upstream main          # you will see conflict message
-git pull --no-rebase upstream main # this will download the update to you local repo
-git push                        # this will push update to your repo assignment on GitHub 
+git pull upstream main              # you will see conflict message
+git pull --no-rebase upstream main  # this will download the update to you local repo
+git push                            # this will push update to your repo assignment on GitHub 
 ```
 
 Share my git log ouput: 
-
 ```bash
 $ git log
 commit c6866b50a78e96433e0079be51356372639bc74a (HEAD -> assignment, origin/assignment)
@@ -271,21 +290,50 @@ Author: yikai82 <yikai.su89@gmail.com>
 Date:   Wed Aug 6 18:14:27 2025 -0400
 
     Merge branch 'main' of https://github.com/UofT-DSI/sql into assignment
-
-
 ```
+
 ### Later, you learn that the branch name 'assignment' needs to be renamed to assignment-one
 
-**Solution:** Rename the oen on the GitHub, and then update the local repo
+**Solution:** Rename the branch name on the GitHub, rename the local repo to re-set the link for push/pull
 
 ```bash
-git status # check your HEAD
-git switch [branch.name]  # move HEAD to branch assignment 
-git branch -m assignment-one # if you are on branch assignment
+$ git status # check your HEAD
+$ git switch [branch.name]  # move HEAD to branch assignment 
+$ git branch -m assignment-one # if you are on branch assignment
 # if you are on a differenet branch
-git branch -m assignment assignment-one
+$ git branch -m assignment assignment-one
+```
+### Later, when you try to push again, you encounter the following errors:
 
-``` 
+```bash                                                                   
+fatal: no upstream configured                                             
+# or                                                                      
+fatal: The upstream branch of your current branch does not match          
+the name of your current branch.  To push to the upstream branch....      
+```                                                                       
+
+**solution:**
+
+```bash
+$ git branch -vv
+  assignment-one b9471f6 [origin/assignment: ahead 4] Merge branch 'main' of https://github.com/UofT-DSI/sql into assignment-one
+  main           77afa20 [origin/main] Merge pull request #254 from postatum/patch
+# above you will see the assignment-one is set to push/pull to origin/assignment (which does not exist anymore), re-set the link using:
+$ git switch assignment-one
+$ git push -u origin assignment-one
+
+# Terminal Ourput:
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 489 bytes | 489.00 KiB/s, done.
+Total 6 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/yikai82/sql.git
+   b9471f6..9e299a2  assignment-one -> assignment-one
+branch 'assignment-one' set up to track 'origin/assignment-one'.
+```
 
 --
 ### Situation 4: You create a clone of with the name 'FUN', and now you want to rename it to 'fun". The Repo FUN also has a local repo 'fun'. The rename is case-senstive and you worry it might trigger errors later 
@@ -317,8 +365,9 @@ git branch -rv                          # check remote branch + more details
 
 ---
 ### Situation 6: Reset the HEAD to the previous time point
-Strigger: You edit a script and realize nothing work so you just want to revert the file to the previous stage (i.e., like the version control in microsoft word or excel)
-**Note: The hard reset will erase everything including the commit commend**  
+Trigger: You edit a script and realize nothing work so you just want to revert the file to the previous stage (i.e., like the version control in microsoft word or excel)
+**Note: The hard reset will erase everything including the commit comment**  
+
 **Solution:**
 
 ```bash
@@ -330,19 +379,84 @@ git push force              # force the change to the GitHub
 ```
 
 ---
-### Situation 7: How to remove an unwanted branch repo on GitHub and local repo
+### Situation 7: Check and compare if there is any difference between two (or more) branches in Terminal. 
+**Background:** You have a branch called assignment-one. You have pull the new update from the upstream (UofT-DSI/sql). You created a new branch "assignment-two" based on assignment-one on GitHub. Theoretically, the assignment-two should have synced with upstream. You want to confirm everything using Terminal. 
+
+**Solution:**
+```bash
+cd /path/to/work/directory
+git status
+git remote -vv      # remote repo + url
+git branch -vv      # show local branch name, the latest commit, remote pull/push setup, the lastest commmit message 
+git branch -rv      # show remote branch name, the latest commit and the commmit message
+
+## the folowing commands will call the individual log
+git log upstream/main
+git log origin/assignment-one      
+git log origin/assignment-two
+
+git log origin/assignment-two...upstream/main        # compare the difference between assignment-two and upstream/main
+## If it returns empty, it mean that assignment-two has caught up the change from upstream/main
+
+
+## A one-line graph view to visually see whether the two branches have diverged, better than an empty log. 
+git log --oneline --graph --decorate     origin/assignment-one origin/assignment-two
+```
+**Direction Matters:** 
+1. ~$ 'git log [target_branch]..[source_branch]' only check if the chagne in 'source branch' is caught up in 'target branch' (i.e., only show commits that are in 'source_branch' but not in 'target_branch'). 2. It does not care about new commits in 'target_branch' that aren’t in 'source_branch'; those don’t make the log show anything.
+2. A good practice to see if the log difference between branch_A and branch_B to compare on both direction to capture the difference.  
+
+```bash
+git log [branch_A]..[branch_B]
+git log [branch_B]..[branch_A]
+
+```
+---
+
+### Situation 8: How to remove an stale (or stealth) branch from you local machine and GitHub
+Background: After I renamed branch assignment to asisngment-one and when I ran the branch -vv and branch -rv, I noticed that I still have branch assignment from the output. On my GitHub, there is no branch 'assignment" 
+
+Output: 
+```bash
+$ git branch -l
+assignment    <---- **stale [local] branch**
+assignment-one 
+assignment-two 
+main
+
+$ git branch -rl 
+origin/HEAD -> origin/main 
+origin/assignment    <---- **stale [remote] branch**
+origin/assignment-one 
+origin/assignment-two'\033[1m'
+```
+
+**Solution:**
+```bash
+git remote -vv
+git branch -vv
+git branch -rv
+git branch -d assignment            # delete local repo 'assignment'  
+git branch -vv; git branch -av      # to confirm local repo 'assignment' does not exist anymore
+git push origin --delete assignment # this will push the change to delete the remote branch 'assingment'
+git push origin --prune             # this will delte any remote-tracking branch (origin/...) that no longer exists on GitHub.  
+
+```
+
+
+
 
 
 
 
 ---
-### ✅ Proper Way to Switch and Track a Remote Branch
+### ✅ Proper Way to Switch and Track a Remote Branch 
 
 ```bash
-git fetch origin
-git switch [branch-name]
+git fetch [branch_name]
+git switch [branch_name]
 git branch --set-upstream-to=origin/[branch-name]
-git push -u origin [branch-name]
+git push -u origin [branch_name]
 ```
 
 
@@ -351,3 +465,4 @@ git push -u origin [branch-name]
 ---
 ### 📚 Other References:
 1. [U of T DSI GitHub Cheatsheet](https://github.com/UofT-DSI/git/blob/main/01_materials/git_cheatsheet.md)
+2. [U of T DSI GitHub/Git](https://github.com/UofT-DSI/sql)
