@@ -1,4 +1,4 @@
-# Module 2 – Let's Git 🤓 Part 2
+# Module 1 – Let's Git 🤓 Part 2
 
 ## This note covers the exercise on the day 2 and day 3 after the setup 
 
@@ -442,11 +442,6 @@ git push origin --delete assignment # this will push the change to delete the re
 git push origin --prune             # this will delte any remote-tracking branch (origin/...) that no longer exists on GitHub.  
 
 ```
-
-
-
-
-
 
 
 ---
