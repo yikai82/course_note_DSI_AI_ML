@@ -29,8 +29,6 @@
 </details>
 
 ---
-# Module 1 – Let's Git 🤓 Part 2
-
 ## This note covers the exercise on the day 2 and day 3 after the setup 
 
 * [Key Note and Important Concept](#key-note-and-important-concept)
