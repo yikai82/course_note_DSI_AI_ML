@@ -7,6 +7,8 @@
 <p align="center">
   🚀 Hands-on Git exercises (Day 2 & Day 3)<br>
   <a href="#key-note-and-important-concept">Key Notes</a> •
+  <a href="https://www.youtube.com/watch?v=iYaQLl0zteA">FLY to Day 2 Recording</a> •
+  <a href="https://www.youtube.com/watch?v=Urnl03YH6GU">FLY to Day 3 Recording</a> •
   <a href="#situation-room-">Situation Room</a> •
   <a href="#other-references">References</a>
 </p>
