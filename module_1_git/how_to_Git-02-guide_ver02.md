@@ -14,21 +14,6 @@
 </p>
 
 ---
-
-<details>
-  <summary><b>📑 Table of Contents</b></summary>
-
-* [Key Note and Important Concept](#key-note-and-important-concept)
-* [1. Create a Local Git Repo and Link It to GitHub (Day 2)](#1-create-a-local-git-repo-and-link-it-to-github-day-2)
-* [2. Fork a Git Repo from GitHub and Sync to a Local Folder (Day 2)](#2-fork-a-git-repo-from-github-and-sync-to-a-local-folder-day-2)
-* [3. Restore a document from other GitHub Repo (Day 3)](#3-restore-a-document-from-other-github-repo-day-3)
-* [4. Merge/Pull other document from Git Repo (Day 3)](#4-mergepull-other-document-from-git-repo-day-3)
-* [5. Cohort7 - production level madness](#5-cohort7--production-level-madness)
-* [Situation Room 🚨](#situation-room-)
-* [Other References](#-other-references)
-</details>
-
----
 ## This note covers the exercise on the day 2 and day 3 after the setup 
 
 * [Key Note and Important Concept](#key-note-and-important-concept)
@@ -70,6 +55,8 @@ Codename:	noble
     You HEAD point to assignment-two. You have a total of **four branches**, assignment-one and assignment-two are your local branches, while origin/assignment-one and origin/assignment-two are your remote branches on GitHub.
 
 4. To delete unwanted repo? Just delete the repo on the GitHub (look for the **danger zone** under repo setting in GitHyb). After that, trash the local folder 😎
+
+5. If you upload a file inside a folder from a local repo to the GitHub, the folder will be added to the remote repo -- This is because GitHub doesn’t track “empty folders,”
 
 ---
 <sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
