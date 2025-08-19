@@ -437,7 +437,7 @@ git status
 git log                     # to retrieve the commit# 
 git branch -vv              # make sure you are in the current branch
 git reset --hard [commit#]  # reset HEAD
-git push force              # force the change to the GitHub
+git push --force              # force the change to the GitHub
 ```
 
 ---
