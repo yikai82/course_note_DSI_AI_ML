@@ -48,14 +48,16 @@ Codename:	noble
 ---
 ## Key Note and Important Concept:
 > [!NOTE]
-> Use `git status`, `git log`, and `git remote -vv` frequently – they’re your compass.
+> Use **`git status`**, **`git log`**, **`git remote -vv`**, **`git branch`**, frequently – they’re your compass.
 
 > [!WARNING]
 > Don’t confuse your **local repo** with your **remote repo** on GitHub. They are two separate worlds.
 
  
 1. Use `git status`, `git log`, `git remote -vv`, `git branch -a`, `git branch -vv`, `git branch -rv` to check the status often
+
 2. git can only track the file, not folder
+
 3. **DO NOT** get confused your *local repo* and your *remote repo*: These are total two different things. 
     Type: 
     ```Bash
@@ -66,6 +68,8 @@ Codename:	noble
     "HEAD -> assignment-two, origin/assignment-two, origin/assignment-one, assignment-one".
     ```
     You HEAD point to assignment-two. You have a total of **four branches**, assignment-one and assignment-two are your local branches, while origin/assignment-one and origin/assignment-two are your remote branches on GitHub.
+
+4. To delete unwanted repo? Just delete the repo on the GitHub (look for the **danger zone** under repo setting in GitHyb). After that, trash the local folder 😎
 
 ---
 <sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
@@ -258,7 +262,9 @@ git clone [url]
 ```
 It will create a new 'my repo" and everything is **reset**. 
 
---
+---
+<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
+
 ### Situation 2: You got an error when you try to pull an update. You are worried that the pull will overwrite your local edited files.
  **Background:** You cloned of someone's repo on GitHub and created a local repo. Then, you also edited a document. You learned that there are new updates from the upstream so you decide to pull. Now you've got an error below. If you pull, you risk overwriting your edited file
 
@@ -288,7 +294,9 @@ git stash list            # View saved stashes
 git stash pop             # Reapply stashed changes
 ```
 
---
+---
+<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
+
 ### Situation 3: You want the new updates from a upstream to sync to your local and remote repo using Terminal  
 **Background:** You forked the DSI/sql and created a branch assignment GitHub already. Then you created a local repo (/path/to/work/sql). From GitHub, you know that both your main branch and assignment branch have new updates. You want the new updates to apply to your local repo and the remote assignment branch. You want to update everything using Terminal. 
 
@@ -383,7 +391,11 @@ To https://github.com/yikai82/sql.git
 branch 'assignment-one' set up to track 'origin/assignment-one'.
 ```
 
---
+
+
+---
+<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
+
 ### Situation 4: You create a clone of with the name 'FUN', and now you want to rename it to 'fun". The Repo FUN also has a local repo 'fun'. The rename is case-senstive and you worry it might trigger errors later 
 
 **Solution: (1)Switch to a different branch temporarily, (2)Rename the branch 'Fun' to [temp-branch], (3) Rename [temp-branch] to 'fun, (4)Delete the old branch 'FUN'**
@@ -411,7 +423,9 @@ git branch -r                           # check remote branch
 git branch -rv                          # check remote branch + more details
 ```
 
----
+----
+<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
+
 ### Situation 6: Reset the HEAD to the previous time point
 Trigger: You edit a script and realize nothing work so you just want to revert the file to the previous stage (i.e., like the version control in microsoft word or excel)
 **Note: The hard reset will erase everything including the commit comment**  
@@ -427,6 +441,8 @@ git push force              # force the change to the GitHub
 ```
 
 ---
+<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
+
 ### Situation 7: Check and compare if there is any difference between two (or more) branches in Terminal. 
 **Background:** You have a branch called assignment-one. You have pull the new update from the upstream (UofT-DSI/sql). You created a new branch "assignment-two" based on assignment-one on GitHub. Theoretically, the assignment-two should have synced with upstream. You want to confirm everything using Terminal. 
 
@@ -460,6 +476,7 @@ git log [branch_B]..[branch_A]
 
 ```
 ---
+<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
 
 ### Situation 8: How to remove an stale (or stealth) branch from you local machine and GitHub
 Background: After I renamed branch assignment to asisngment-one and when I ran the branch -vv and branch -rv, I noticed that I still have branch assignment from the output. On my GitHub, there is no branch 'assignment" 
@@ -493,6 +510,10 @@ git push origin --prune             # this will delte any remote-tracking branch
 
 
 ---
+
+
+<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
+
 ### ✅ Proper Way to Switch and Track a Remote Branch 
 
 ```bash
