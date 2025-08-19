@@ -2,7 +2,8 @@
   <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo" width="120">
 </p>
 
-<h1 id="module 1-par2" align="center">Module 1 – How to Git - Part 2 🤓 </h1>
+#
+<h1 align="center">Module 1 – How to Git - Part 2 🤓 </h1>
 
 <p align="center">
   🚀 Hands-on Git exercises (Day 2 & Day 3)<br>
@@ -59,7 +60,7 @@ Codename:	noble
 5. If you upload a file inside a folder from a local repo to the GitHub, the folder will be added to the remote repo -- This is because GitHub doesn’t track “empty folders,”
 
 
-<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
+<sub>[↥ back to top](#)</sub>
 
 ---
 
@@ -82,7 +83,7 @@ git status
 git remote -v
 ```
 
-<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
+<sub>[↥ back to top](#)</sub>
 
 ---
 
@@ -99,7 +100,7 @@ git clone [repository_url]               # Clone an existing repository
 git clone [repository_url] [new_dir]     # Clone and rename the directory
 ```
 
-<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+<sub>[↥ back to top](#)</sub>
 
 ---
 
@@ -155,7 +156,7 @@ git status; git log                 # to check the status
 git push fix-avocados
 ```
 
-<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+<sub>[↥ back to top](#)</sub>
 
 ---
 
@@ -207,7 +208,7 @@ git commit
 git push 
 ```
 
-<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+<sub>[↥ back to top](#)</sub>
 
 ---
 
@@ -237,7 +238,7 @@ git branch -vv
 #### I am totally lost here so... 🚧 🚧 🚧
 
 
-<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+<sub>[↥ back to top](#)</sub>
 
 ---
 
@@ -256,7 +257,7 @@ git clone [url]
 ```
 It will create a new 'my repo" and everything is **reset**. 
 
-<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+<sub>[↥ back to top](#)</sub>
 
 ---
 
@@ -289,7 +290,7 @@ git stash list            # View saved stashes
 git stash pop             # Reapply stashed changes
 ```
 
-<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+<sub>[↥ back to top](#)</sub>
 
 ---
 
@@ -387,7 +388,7 @@ To https://github.com/yikai82/sql.git
 branch 'assignment-one' set up to track 'origin/assignment-one'.
 ```
 
-<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+<sub>[↥ back to top](#)</sub>
 
 ---
 
@@ -418,7 +419,7 @@ git branch -r                           # check remote branch
 git branch -rv                          # check remote branch + more details
 ```
 
-<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+<sub>[↥ back to top](#)</sub>
 
 ----
 
@@ -436,7 +437,7 @@ git reset --hard [commit#]  # reset HEAD
 git push --force              # force the change to the GitHub
 ```
 
-<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+<sub>[↥ back to top](#)</sub>
 
 ---
 
@@ -473,7 +474,7 @@ git log [branch_B]..[branch_A]
 
 ```
 
-<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+<sub>[↥ back to top](#)</sub>
 
 ---
 
@@ -507,7 +508,7 @@ git push origin --prune             # this will delte any remote-tracking branch
 
 ```
 
-<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+<sub>[↥ back to top](#)</sub>
 
 ---
 
