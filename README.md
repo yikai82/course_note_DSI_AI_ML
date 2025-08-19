@@ -10,6 +10,7 @@
 ## Content
 
 * [Let's **Git** ](/module_1_git/)
+  * [How to Git 🤓 (Part 2)](/module_1_git/how_to_Git-02-guide_ver02.md)
 * [**DB Brower for SQLite**](/module_2_sql/)
 * [Python]()
 
