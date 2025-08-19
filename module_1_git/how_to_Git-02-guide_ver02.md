@@ -2,7 +2,7 @@
   <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo" width="120">
 </p>
 
-<h1 align="center">Module 1 – Let's Git 🤓 (Part 2)</h1>
+<h1 id="module 1-par2" align="center">Module 1 – How to Git - Part 2 🤓 </h1>
 
 <p align="center">
   🚀 Hands-on Git exercises (Day 2 & Day 3)<br>
@@ -58,8 +58,10 @@ Codename:	noble
 
 5. If you upload a file inside a folder from a local repo to the GitHub, the folder will be added to the remote repo -- This is because GitHub doesn’t track “empty folders,”
 
----
+
 <sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
+
+---
 
 ## 1. Create a Local Git Repo and Link It to GitHub (Day 2)
 To create a local repo called `test_repo` and linking it to GitHub during the day 2 git in-class exercise: 
@@ -80,8 +82,9 @@ git status
 git remote -v
 ```
 
----
 <sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
+
+---
 
 ## 2. Fork a Git Repo from GitHub and Sync to a Local Folder (Day 2)
 Just follow this guide and/or watch the vidoe
@@ -96,8 +99,9 @@ git clone [repository_url]               # Clone an existing repository
 git clone [repository_url] [new_dir]     # Clone and rename the directory
 ```
 
+<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+
 ---
-<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
 
 ## 3. Restore a document from other GitHub Repo (Day 3)
 ### Background
@@ -151,8 +155,9 @@ git status; git log                 # to check the status
 git push fix-avocados
 ```
 
+<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+
 ---
-<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
 
 ## 4. Merge/Pull other document from Git Repo (Day 3)
 ### Background 
@@ -202,8 +207,9 @@ git commit
 git push 
 ```
 
+<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+
 ---
-<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
 
 ## 5. Cohort7 - production level madness
 ### Background
@@ -228,11 +234,12 @@ git pull --no-rebase # to solve any conflict if there is any
 git branch -vv
  
 ```
-### I am totally lost here so... 🚧 🚧 🚧
+#### I am totally lost here so... 🚧 🚧 🚧
 
+
+<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
 
 ---
-<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
 
 ## Situation Room 🚨
 
@@ -249,8 +256,9 @@ git clone [url]
 ```
 It will create a new 'my repo" and everything is **reset**. 
 
+<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+
 ---
-<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
 
 ### Situation 2: You got an error when you try to pull an update. You are worried that the pull will overwrite your local edited files.
  **Background:** You cloned of someone's repo on GitHub and created a local repo. Then, you also edited a document. You learned that there are new updates from the upstream so you decide to pull. Now you've got an error below. If you pull, you risk overwriting your edited file
@@ -281,8 +289,9 @@ git stash list            # View saved stashes
 git stash pop             # Reapply stashed changes
 ```
 
+<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+
 ---
-<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
 
 ### Situation 3: You want the new updates from a upstream to sync to your local and remote repo using Terminal  
 **Background:** You forked the DSI/sql and created a branch assignment GitHub already. Then you created a local repo (/path/to/work/sql). From GitHub, you know that both your main branch and assignment branch have new updates. You want the new updates to apply to your local repo and the remote assignment branch. You want to update everything using Terminal. 
@@ -378,10 +387,9 @@ To https://github.com/yikai82/sql.git
 branch 'assignment-one' set up to track 'origin/assignment-one'.
 ```
 
-
+<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
 
 ---
-<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
 
 ### Situation 4: You create a clone of with the name 'FUN', and now you want to rename it to 'fun". The Repo FUN also has a local repo 'fun'. The rename is case-senstive and you worry it might trigger errors later 
 
@@ -410,8 +418,9 @@ git branch -r                           # check remote branch
 git branch -rv                          # check remote branch + more details
 ```
 
+<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+
 ----
-<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
 
 ### Situation 6: Reset the HEAD to the previous time point
 Trigger: You edit a script and realize nothing work so you just want to revert the file to the previous stage (i.e., like the version control in microsoft word or excel)
@@ -427,8 +436,9 @@ git reset --hard [commit#]  # reset HEAD
 git push --force              # force the change to the GitHub
 ```
 
+<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+
 ---
-<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
 
 ### Situation 7: Check and compare if there is any difference between two (or more) branches in Terminal. 
 **Background:** You have a branch called assignment-one. You have pull the new update from the upstream (UofT-DSI/sql). You created a new branch "assignment-two" based on assignment-one on GitHub. Theoretically, the assignment-two should have synced with upstream. You want to confirm everything using Terminal. 
@@ -462,8 +472,10 @@ git log [branch_A]..[branch_B]
 git log [branch_B]..[branch_A]
 
 ```
+
+<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
+
 ---
-<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
 
 ### Situation 8: How to remove an stale (or stealth) branch from you local machine and GitHub
 Background: After I renamed branch assignment to asisngment-one and when I ran the branch -vv and branch -rv, I noticed that I still have branch assignment from the output. On my GitHub, there is no branch 'assignment" 
@@ -495,11 +507,9 @@ git push origin --prune             # this will delte any remote-tracking branch
 
 ```
 
+<sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
 
 ---
-
-
-<sub>[↥ back to top](#module-1--lets-git--part-2)</sub>
 
 ### ✅ Proper Way to Switch and Track a Remote Branch 
 
@@ -514,6 +524,8 @@ git push -u origin [branch_name]
 
 
 ---
-### 📚 Other References:
+### 📚 References:
 1. [U of T DSI GitHub Cheatsheet](https://github.com/UofT-DSI/git/blob/main/01_materials/git_cheatsheet.md)
 2. [U of T DSI GitHub/Git](https://github.com/UofT-DSI/sql)
+
+[LINK TO TEST](<h1 align="center">Module 1 – How to Git - Part 2 🤓 </h1>)
