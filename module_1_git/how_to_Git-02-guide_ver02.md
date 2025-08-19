@@ -48,10 +48,10 @@ Codename:	noble
 ---
 ## Key Note and Important Concept:
 > [!NOTE]
-> Use **`git status`**, **`git log`**, **`git remote -vv`**, **`git branch`**, frequently – they’re your compass.
+> Use **`git status`**, **`git log`**, **`git remote -vv`**, **`git branch`** frequently – they’re your compass. 🧭
 
 > [!WARNING]
-> Don’t confuse your **local repo** with your **remote repo** on GitHub. They are two separate worlds.
+> Don’t confuse your **local repo** with your **remote repo** on GitHub. They are two separate worlds. -- 🃏 vs. 🀄
 
  
 1. Use `git status`, `git log`, `git remote -vv`, `git branch -a`, `git branch -vv`, `git branch -rv` to check the status often
