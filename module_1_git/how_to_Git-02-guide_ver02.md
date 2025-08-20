@@ -34,8 +34,8 @@ Codename:	noble
 ---
 ## Key Note and Important Concept:
 > [!NOTE]
-> Always run **`git fetch`** before the git log for the log comparison as git fetch will update your local view of the remote history (without changing your working branch) <br>
-
+> Always run **`git fetch`** before the git log for the log comparison as git fetch will update your local view of the remote history (without changing your working branch)  
+  
 > **Direction matters** for the log comparison: **`git log`** [repo_site_1/branch_a]..[repo_site_2/branch_b] ➡️ only check if branch a is ahead of branch b ➡️ See [Situation 7](#situation-7-check-and-compare-if-there-is-any-difference-between-two-or-more-branches-in-terminal) for details.<br>
 
 > [!WARNING]
