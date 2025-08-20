@@ -34,16 +34,18 @@ Codename:	noble
 ---
 ## Key Note and Important Concept:
 > [!NOTE]
-> Use **`git status`**, **`git log`**, **`git remote -vv`**, **`git branch`** frequently – they’re your compass. 🧭  
-> Always running **`git fetch`** before the git log for the log comparison as git fetch will log the latest update. 
+> Always run **`git fetch`** before the git log for the log comparison as git fetch will update your local view of the remote history (without changing your working branch) <br>
+
+> **Direction matters** for the log comparison: **`git log`** [repo_site_1/branch_a]..[repo_site_2/branch_b] ➡️ only check if branch a is ahead of branch b ➡️ See [Situation 7](#situation-7-check-and-compare-if-there-is-any-difference-between-two-or-more-branches-in-terminal) for details.<br>
 
 > [!WARNING]
-> Don’t confuse your **local repo** with your **remote repo** on GitHub. They are two separate worlds. -- 🃏 vs. 🀄
+> Don’t confuse your **local repo** with your **remote repo** on GitHub. They are two separate worlds. -- 🃏 vs. 🀄  
 
- 
-1. Use `git status`, `git log`, `git remote -vv`, `git branch -a`, `git branch -vv`, `git branch -rv` to check the status often
+### Key Concept
 
-2. git can only track the file, not folder
+1. Use `git status`, `git log`, `git remote -vv`, `git branch -a`, `git branch -vv`, and `git branch -rv` to check the status often - they’re your compass  🧭
+
+2. Git only tracks files. If you upload a file inside a folder from a local repo to the GitHub, the folder will be added to the remote repo -- This is because GitHub doesn’t track **empty folders**. It, however, r*emember tha path*
 
 3. **DO NOT** get confused your *local repo* and your *remote repo*: These are total two different things. 
     Type: 
@@ -58,7 +60,6 @@ Codename:	noble
 
 4. To delete unwanted repo? Just delete the repo on the GitHub (look for the **danger zone** under repo setting in GitHyb). After that, trash the local folder 😎
 
-5. If you upload a file inside a folder from a local repo to the GitHub, the folder will be added to the remote repo -- This is because GitHub doesn’t track “empty folders,”
 
 
 <sub>[↥ back to top](#)</sub>
@@ -312,10 +313,11 @@ git log upstream/main               # upstream/main is where I assigned for the 
 git log assignment..upstream/main   # this will show if there is any different, 
                                     # if it is return empty, you should be good. 
 
-## If there is difference S
+## If there is difference
 git pull upstream main              # you will see conflict message
-git pull --no-rebase upstream main  # this will download the update to you local repo
-git push                            # this will push update to your repo assignment on GitHub 
+git pull --no-rebase upstream main  # this will download the update to you local repo 
+                                    # and you will not see the conflict message 
+git push                            # this will push update from your local repo to your remote repo on GitHub 
 ```
 
 Share my git log ouput: 
