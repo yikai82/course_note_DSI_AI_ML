@@ -35,6 +35,7 @@ Codename:	noble
 ## Key Note and Important Concept:
 > [!NOTE]
 > Use **`git status`**, **`git log`**, **`git remote -vv`**, **`git branch`** frequently – they’re your compass. 🧭
+> Always fetch first before log 
 
 > [!WARNING]
 > Don’t confuse your **local repo** with your **remote repo** on GitHub. They are two separate worlds. -- 🃏 vs. 🀄
@@ -294,7 +295,7 @@ git stash pop             # Reapply stashed changes
 
 ---
 
-### Situation 3: You want the new updates from a upstream to sync to your local and remote repo using Terminal  
+### **📌 Situation 3**: You want the new updates from a upstream to sync to your local and remote repo using Terminal  
 **Background:** You forked the DSI/sql and created a branch assignment GitHub already. Then you created a local repo (/path/to/work/sql). From GitHub, you know that both your main branch and assignment branch have new updates. You want the new updates to apply to your local repo and the remote assignment branch. You want to update everything using Terminal. 
 
 **Solution:**
@@ -304,11 +305,14 @@ cd path/to/work/directory/sql
 git status                          # it should point to the assignment branch 
 git remote -v                       # check the remote setting
 git remote add upstream [url]       # set up the upstream
-git log [branch/name]               # if no branch name is given, it will output you current HEAD 
-git log upstream/main               # upstream/main is where I assigned for the UofT-DSI/sql 
-git log assignment..upstream/main   # this will show if there is any different, if it is return empty, you should be good. 
-## If there is difference 
 git fetch upstream main
+git log origin                      # if no branch name is given, it will output you current HEAD 
+git log upstream/main               # upstream/main is where I assigned for the UofT-DSI/sql, 
+                                    # need to fetch first to generate log
+git log assignment..upstream/main   # this will show if there is any different, 
+                                    # if it is return empty, you should be good. 
+
+## If there is difference S
 git pull upstream main              # you will see conflict message
 git pull --no-rebase upstream main  # this will download the update to you local repo
 git push                            # this will push update to your repo assignment on GitHub 
@@ -365,7 +369,7 @@ fatal: The upstream branch of your current branch does not match
 the name of your current branch.  To push to the upstream branch....      
 ```                                                                       
 
-**solution:**
+**Solution:**
 
 ```bash
 $ git branch -vv
