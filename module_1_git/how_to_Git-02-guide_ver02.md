@@ -34,8 +34,8 @@ Codename:	noble
 ---
 ## Key Note and Important Concept:
 > [!NOTE]
-> Use **`git status`**, **`git log`**, **`git remote -vv`**, **`git branch`** frequently – they’re your compass. 🧭
-> Always fetch first before log 
+> Use **`git status`**, **`git log`**, **`git remote -vv`**, **`git branch`** frequently – they’re your compass. 🧭  
+> Always running **`git fetch`** before the git log for the log comparison as git fetch will log the latest update. 
 
 > [!WARNING]
 > Don’t confuse your **local repo** with your **remote repo** on GitHub. They are two separate worlds. -- 🃏 vs. 🀄
