@@ -10,7 +10,7 @@
   <a href="#key-note-and-important-concept">Key Notes</a> •
   <a href="https://www.youtube.com/watch?v=iYaQLl0zteA">FLY to Day 2 Recording</a> •
   <a href="https://www.youtube.com/watch?v=Urnl03YH6GU">FLY to Day 3 Recording</a> •
-  <a href="#situation-room-">Situation Room</a> •
+  <a href="#situation-room-" style="background-color:#9c4965; color:white; padding:0px 9px; border-radius:4px; font-weight:regular; text-decoration:none;">Situation Room</a> • 
   <a href="#other-references">References</a>
 </p>
 
@@ -23,8 +23,7 @@
 * [3. Restore a document from other GitHub Repo (Day 3)](#3-restore-a-document-from-other-github-repo-day-3)
 * [4. Merge/Pull other document from Git Repo (Day 3)](#4-mergepull-other-document-from-git-repo-day-3)
 * [5. Cohort7 -production level madness](#5-cohort7--production-level-madness)
-* [Situation Room 🚨](#situation-room-)
-
+* **[Situation Room - 🚨](#situation-room-)**
 
 ## System
 Description:	Kubuntu-T2 24.04.2 LTS
@@ -32,41 +31,62 @@ Release:	24.04
 Codename:	noble
 
 ---
-## Key Note and Important Concept:
+## Key Note and Important Concept
+
 > [!NOTE]
-> Always run **`git fetch`** before the git log for the log comparison as git fetch will update your local view of the remote history (without changing your working branch)  
+> Always run **`git fetch`** before using git log for a log comparison as **`git fetch`** will update your local view of the remote history (without changing your working branch)  
 >  
->  **Direction matters** for the log comparison: **`git log`** [repo_site_1/branch_a]..[repo_site_2/branch_b] ➡️ only check if branch a is ahead of branch b ➡️ See [Situation 7](#situation-7-check-and-compare-if-there-is-any-difference-between-two-or-more-branches-in-terminal) for details.<br>
+>  **Direction matters** for log comparisons. For example  `git log [repo_site_1/branch_a]..[repo_site_2/branch_b]`  
+
+>> ➡️ It **only** checks if <branch a> is ahead of <branch_b>  ➡️ See [Situation 7](#situation-7-check-and-compare-if-there-is-any-difference-between-two-or-more-branches-in-terminal) for details.<br>
 
 > [!WARNING]
-> Don’t confuse your **local repo** with your **remote repo** on GitHub. They are two separate worlds. -- 🃏 vs. 🀄  
+> Don’t confuse your **local repo** with your **remote repo** on GitHub. They are two separate worlds.  
+> <p align="center">
+>   <img src="image/Dragon.png" alt="dragon" width="90">  
+>   &nbsp;&nbsp;&nbsp;
+>   <span style="font-size: 1.5em; font-weight: bold;">VS</span>  
+>   &nbsp;&nbsp;&nbsp;
+>   <img src="image/Wall-E-Wall-E.512.png" alt="robot" width="90">
+> </p>
 
 ### Key Concept
 
-1. Use `git status`, `git log`, `git remote -vv`, `git branch -a`, `git branch -vv`, and `git branch -rv` to check the status often - they’re your compass  🧭
+1. Use `git status`, `git log`, `git remote -vv`, `git branch -a`, `git branch -vv`, and `git branch -rv` to check the status often - they’re your compass  🧭  
+    ```bash
+    $ git branch -vv # show the conncetion between local and its link upstream
+    assignment-1 b401131 [origin/assignment-1] Merge pull request no.220 from UofT-DSI/update
+    main         c555065 [origin/main] Merge pull request no.202 from UofT-DSI/update
+    ```
 
-2. Git only tracks files. If you upload a file inside a folder from a local repo to the GitHub, the folder will be added to the remote repo -- This is because GitHub doesn’t track **empty folders**. It, however, r*emember tha path*
+2. Git only tracks files. If you upload a file inside a folder from a local repo to the GitHub, the folder will be added to the remote repo -- This is because GitHub doesn’t track **empty folders**. It, however, *remember tha path* for the files it tracks
 
-3. **DO NOT** get confused your *local repo* and your *remote repo*: These are total two different things. 
-    Type: 
+3. Only git log is using syntax [repo_name/branch]; other git function will use repo_name branch.  
+For example: `git log upstream/main` vs. `git push origin main`
+
+4. **DO NOT** get confused a *local repo* and a *remote repo*: These are total two different things.  
+    For example: 
     ```Bash
     git log 
-    ```
+    ```  
     Terminal Output:
     ```bash
     "HEAD -> assignment-two, origin/assignment-two, origin/assignment-one, assignment-one".
     ```
-    You HEAD point to assignment-two. You have a total of **four branches**, assignment-one and assignment-two are your local branches, while origin/assignment-one and origin/assignment-two are your remote branches on GitHub.
+    In the example above, the HEAD point to assignment-two. There are a total of **four branches**, including assignment-one and assignment-two are two local branches, while origin/assignment-one and origin/assignment-two are two remote branches on GitHub.
 
-4. To delete unwanted repo? Just delete the repo on the GitHub (look for the **danger zone** under repo setting in GitHyb). After that, trash the local folder 😎
+4. Want to delete unwanted repo? Just delete the repo on the GitHub (look for the **danger zone** under repo setting in GitHyb). After that, trash the local folder 😎  
 
+📌 When scrolling inside the `git log` pager, **space** to go forward, **b** to go back, **q** to quit.
+
+<a href="" style="background-color:61AD89; color:black; padding:0px 9px; border-radius:4px; font-weight:semi-bold; text-decoration:none;">BONUS:</a> 
+1. Use `git add .` to add all the changes in the current folder
 
 
 <sub>[↥ back to top](#)</sub>
 
 ---
-
-## 1. Create a Local Git Repo and Link It to GitHub (Day 2)
+## 1. Create a Local Git Repo and Link It to GitHub (Day 2)  
 To create a local repo called `test_repo` and linking it to GitHub during the day 2 git in-class exercise: 
 
 ```bash
@@ -88,7 +108,6 @@ git remote -v
 <sub>[↥ back to top](#)</sub>
 
 ---
-
 ## 2. Fork a Git Repo from GitHub and Sync to a Local Folder (Day 2)
 Just follow this guide and/or watch the vidoe
 - [UofT DSI Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#setting-up)
@@ -105,10 +124,13 @@ git clone [repository_url] [new_dir]     # Clone and rename the directory
 <sub>[↥ back to top](#)</sub>
 
 ---
-
 ## 3. Restore a document from other GitHub Repo (Day 3)
 ### Background
 Someone accidentally delete the avocado from the guacamole recipe, let's fix it. 
+
+📌 **main concept:**  
+1. How to create a local branch and push to GitHub in shell. 
+2. Restore 
 
 Follow the command below to create a situation:  
 
@@ -122,7 +144,7 @@ ls # list the file
 code guacamole.md 
 
 ## Here you will see that avocados was deleted by accident so we want to restore
-git switch -c fix-avocados e4912279bfddcc05c9c91924cd40efcf04f2f1c3   # create a new branch 'fix-avocados' to restore the document to its previous time point
+git switch -c fix-avocados e4912279bfddcc05c9c91924cd40efcf04f2f1c3   # create a new branch name 'fix-avocados' to restore the document to its previous time point
 
 # commit id = e4912279bfddcc05c9c91924cd40efcf04f2f1c3
 # Use'git log' to retrieve commit id. 
@@ -161,7 +183,6 @@ git push fix-avocados
 <sub>[↥ back to top](#)</sub>
 
 ---
-
 ## 4. Merge/Pull other document from Git Repo (Day 3)
 ### Background 
 This is an example from the day 3 git course when a document needs to be pulled/merged from different source (big batch), and how to troubleshoot. Just follow the command in the previous section to setup upstream.  Follow the command below to create a situation. This  
@@ -194,7 +215,7 @@ fatal: Need to specify how to reconcile divergent branches.
 Run the following command to merge the conflict document and push:
 
 ```bash
-# I am no sure which one I was using...' '
+# I am not sure which one I was using...' '
 git pull --no-rebase upsteram main     
 git pull --no-rebase
 
@@ -213,7 +234,6 @@ git push
 <sub>[↥ back to top](#)</sub>
 
 ---
-
 ## 5. Cohort7 - production level madness
 ### Background
 The instructor was simulating a chaos situation where multiple people working on the same document in an industry setting. 
@@ -243,7 +263,6 @@ git branch -vv
 <sub>[↥ back to top](#)</sub>
 
 ---
-
 ## Situation Room 🚨
 
 ### Situation 1: You mess around a local folder that is tracked by git on GitHub and you desperately want to reset every thing on your GitHub repo 
@@ -262,7 +281,6 @@ It will create a new 'my repo" and everything is **reset**.
 <sub>[↥ back to top](#)</sub>
 
 ---
-
 ### Situation 2: You got an error when you try to pull an update. You are worried that the pull will overwrite your local edited files.
  **Background:** You cloned of someone's repo on GitHub and created a local repo. Then, you also edited a document. You learned that there are new updates from the upstream so you decide to pull. Now you've got an error below. If you pull, you risk overwriting your edited file
 
@@ -295,7 +313,6 @@ git stash pop             # Reapply stashed changes
 <sub>[↥ back to top](#)</sub>
 
 ---
-
 ### **📌 Situation 3**: You want the new updates from a upstream to sync to your local and remote repo using Terminal  
 **Background:** You forked the DSI/sql and created a branch assignment GitHub already. Then you created a local repo (/path/to/work/sql). From GitHub, you know that both your main branch and assignment branch have new updates. You want the new updates to apply to your local repo and the remote assignment branch. You want to update everything using Terminal. 
 
@@ -397,8 +414,7 @@ branch 'assignment-one' set up to track 'origin/assignment-one'.
 <sub>[↥ back to top](#)</sub>
 
 ---
-
-### Situation 4: You create a clone of with the name 'FUN', and now you want to rename it to 'fun". The Repo FUN also has a local repo 'fun'. The rename is case-senstive and you worry it might trigger errors later 
+### Situation 4: You create a remote clone of with the name 'FUN', and now you want to rename it to 'fun". The Repo FUN also has a local repo 'fun'. The rename is case-senstive and you worry it might trigger errors later 
 
 **Solution: (1)Switch to a different branch temporarily, (2)Rename the branch 'Fun' to [temp-branch], (3) Rename [temp-branch] to 'fun, (4)Delete the old branch 'FUN'**
 
@@ -409,7 +425,8 @@ git push origin -u assignment       # Push the new branch to remote and set it t
 git push origin --delete FUN        # Delete the old branch from the remote (optional but recommended):
 ```
 
-### Situation 5: You want to pull a remote branch to the local repo that you've setup already. This is a case similar to the big-batch. However, you are also confused about how many branches you have locally or remotely
+---
+### Situation 5: You want to pull a remote branch to the local repo that you've setup already. This is a case similar to the big-batch. However, you are also **confused about how many branches you have locally or remotely**
 
 **Solution:**
 
@@ -429,7 +446,7 @@ git branch -rv                          # check remote branch + more details
 
 ----
 
-### Situation 6: Reset the HEAD to the previous time point
+### **📌 Situation 6:** Reset the HEAD to the previous time point using advance **git log** function
 Trigger: You edit a script and realize nothing work so you just want to revert the file to the previous stage (i.e., like the version control in microsoft word or excel)
 **Note: The hard reset will erase everything including the commit comment**  
 
@@ -437,17 +454,27 @@ Trigger: You edit a script and realize nothing work so you just want to revert t
 
 ```bash
 git status
-git log                     # to retrieve the commit# 
-git branch -vv              # make sure you are in the current branch
-git reset --hard [commit#]  # reset HEAD
+git branch -av              # to show all the branch (local and remote)
+git log                     # to retrieve the **recent** commit the the current HEAD, 
+                            # use git switch to switch branch if needed
+
+## advance git log
+git log [repo_site/branch] --since="2025-01-01" --oneline  # This retrieve all the commit since the <date> in one line format.      # need to have oneline as git log is fedault with less format (default to show limited commit)
+
+# if you want the long format 
+git --no-pager log [repo_site/branch] --since="2025-01-01"
+
+## To reset 
+git branch -vv                # make sure you are in the current branch
+git reset --hard [commit#]    # reset HEAD
 git push --force              # force the change to the GitHub
 ```
+
 
 <sub>[↥ back to top](#)</sub>
 
 ---
-
-### Situation 7: Check and compare if there is any difference between two (or more) branches in Terminal. 
+### **📌 Situation 7**: Check and compare if there is any difference between two (or more) branches in Terminal. 
 **Background:** You have a branch called assignment-one. You have pull the new update from the upstream (UofT-DSI/sql). You created a new branch "assignment-two" based on assignment-one on GitHub. Theoretically, the assignment-two should have synced with upstream. You want to confirm everything using Terminal. 
 
 **Solution:**
@@ -483,7 +510,6 @@ git log [branch_B]..[branch_A]
 <sub>[↥ back to top](#)</sub>
 
 ---
-
 ### Situation 8: How to remove an stale (or stealth) branch from you local machine and GitHub
 Background: After I renamed branch assignment to asisngment-one and when I ran the branch -vv and branch -rv, I noticed that I still have branch assignment from the output. On my GitHub, there is no branch 'assignment" 
 
@@ -517,7 +543,6 @@ git push origin --prune             # this will delte any remote-tracking branch
 <sub>[↥ back to top](#)</sub>
 
 ---
-
 ### ✅ Proper Way to Switch and Track a Remote Branch 
 
 ```bash
