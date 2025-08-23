@@ -14,10 +14,5 @@ env/
 .DS_Store
 *.swp
 
-# Ignore image file
-*.png
-*.svg
-
-
 $ Ignore bakup file
 *bkup*.md
