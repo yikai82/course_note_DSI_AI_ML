@@ -38,7 +38,7 @@ Codename:	noble
 >  
 >  **Direction matters** for log comparisons. For example  `git log [repo_site_1/branch_a]..[repo_site_2/branch_b]`  
 
->> ➡️ It **only** checks if <branch a> is ahead of <branch_b>  ➡️ See [Situation 7](#situation-7-check-and-compare-if-there-is-any-difference-between-two-or-more-branches-in-terminal) for details.<br>
+>> **➡️ It **only** checks if branch_a is ahead of  branch_b  ➡️ See [Situation 7](#situation-7-check-and-compare-if-there-is-any-difference-between-two-or-more-branches-in-terminal) for details.<br>**
 
 > [!WARNING]
 > Don’t confuse your **local repo** with your **remote repo** on GitHub. They are two separate worlds.  
@@ -77,10 +77,13 @@ For example: `git log upstream/main` vs. `git push origin main`
 
 4. Want to delete unwanted repo? Just delete the repo on the GitHub (look for the **danger zone** under repo setting in GitHyb). After that, trash the local folder 😎  
 
+
 📌 When scrolling inside the `git log` pager, **space** to go forward, **b** to go back, **q** to quit.
 
-<a href="" style="background-color:61AD89; color:black; padding:0px 9px; border-radius:4px; font-weight:semi-bold; text-decoration:none;">BONUS:</a> 
-1. Use `git add .` to add all the changes in the current folder
+
+<!-- <a href="" style="background-color:61AD89; color:black; padding:0px 9px; border-radius:4px; font-weight:semi-bold; text-decoration:none;">BONUS:</a>  -->
+**BOUNS** 
+1. Use **`git add .`** to add all the changes in the current folder
 
 
 <sub>[↥ back to top](#)</sub>
