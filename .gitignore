@@ -1,0 +1,23 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual env
+.venv/
+env/
+
+# Ignore data or large files
+*.zip
+*.csv
+
+# Ignore system files
+.DS_Store
+*.swp
+
+# Ignore image file
+*.png
+*.svg
+
+
+$ Ignore bakup file
+*bkup*.md
