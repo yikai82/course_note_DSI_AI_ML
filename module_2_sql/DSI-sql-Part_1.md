@@ -6,13 +6,18 @@
 * [Key notes during the live sections](#key-notes-during-the-live-sections)  
 * [1. SQL Database](#1-sql-database)
 * [2. Basic commands](#2-common-commands)  
-
   * [2.1 `SELECT...FROM`, `Order by`, `like`, `limit`, `where`](#21-select-order-by-like-limit-where)  
   * [2.2 `LIKE IS`, `NULL`, `between`, `case`](#22-like-is-null-between-case)  
 * [📌 3. ALL about JOIN ](#join)  
   * [JOIN Diagram](#the-diagram-below-illustrate-the-different-type-of-join)  
 
 <br>  
+
+---
+> [!NOTE]  
+> Start with ![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-911919) and 📌
+
+
 
 ---
 ## System
@@ -259,17 +264,18 @@ FROM vendor;
 
 ---
 ## 3. `JOIN` 
-### To reference data by combining different tables. For example, the table customer_purchase only has customer id and the customer table has both customer id and customer name. You want to combine a table that has customer name, id, and purchase history.
+### To reference data by combining different tables. For example, the table customer_purchase only has customer id and the customer table has both customer id and customer name. You want to combine a table that has customer name, id, and purchase history.  
 
+
+---
+![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-911919) 
 ### 3.1 (INNER) JOIN:  
 - is the default join.  
 - filter `both` tables to rows present in both tables --> NO NULL  
 - **Common error**: **ambiguous columnuse**, use alias to refer to the columns that exist on both tables  
 <br>
 
----
 
-![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-911919?style=for-the-badge) 
 ```sql
 -- list the product names and customer name which vendor has sold products to 
 SELECT
@@ -364,6 +370,7 @@ SELECT*FROM customer_purchases;  -- contains 4221 rows
 <sub>[↥ back to top](#)</sub>
 
 ---
+![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-911919) 
 
 ### 3.5 Multiple Table JOIN
 - More than one table can be JOIN
@@ -371,7 +378,7 @@ SELECT*FROM customer_purchases;  -- contains 4221 rows
 - It is important to decide which table should be the **FROM** table.  
 <br>  
   
-![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-911919?style=for-the-badge) 
+
 ```sql	
 /* which vendor has sold products to a customer 
 ... and which product was it? 
