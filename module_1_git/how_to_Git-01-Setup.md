@@ -8,22 +8,15 @@
 <p align="center">
   🚀 Let's Get Ready (Day 1)<br>
   <a href="#key-note-and-important-concept">Key Notes</a> •
-  <a href="#situation-room-" style="background-color:#9c4965; color:white; padding:0px 9px; border-radius:4px; font-weight:regular; text-decoration:none;">Situation Room</a> • 
-  <a href="#other-references">References</a>
+  <a href="#situation-room-" style="background-color:#9c4965; color:white; padding:0px 9px; border-radius:4px; font-weight:regular; text-decoration:none;">Situation Room</a> 
+  <!-- <a href="#other-references">References</a> -->
 </p>
 
-## System Information 
-### 💡 This is for Linux/Ubuntu 
-
-Distributor ID:	Ubuntu  
-Description: <a href="" style="color:1D99F3; padding:0px 5px; border-radius:4px; font-weight:semi-bold; text-decoration:none;">Kubuntu-T2 24.04.2 LTS</a>
+## System
+<a href="" style="background-color:616161; color:white; padding:0px 9px; border-radius:4px; font-weight:bold; text-decoration:none;">Linux</a>  Kubuntu-T2 24.04.2 LTS  
 Release:	24.04  
-Codename:<a href="" style="background-color:1B89D0; color:white; padding:0px 9px; border-radius:4px; font-weight:semi-bold; text-decoration:none;">noble</a>
-
-
-
-**=== Current Kernel ===**  
-<a href="" style="color:1D99F3; padding:0px 5px; border-radius:4px; font-weight:semi-bold; text-decoration:none;">Linux 6.14.0-1-t2-noble  </a>
+Codename:  <a href="" style="background-color:1B89D0; color:white; padding:0px 9px; border-radius:4px; font-weight:semi-bold; text-decoration:none;">noble</a>  
+Kernel Version: Linux 6.14.0-1-t2-noble
 
 ---
 
@@ -48,7 +41,7 @@ git config --global credential.helper manager
 > After successfully login and running `git credential-manager github list`, I see the following error:
 >
 > ```bash
-> fatal: No credential store has been selected.
+> **fatal: No credential store has been selected.**
 > Set the GCM_CREDENTIAL_STORE environment variable or the credential.credentialStore Git configuration setting to one of the following options:
 >
 > secretservice : freedesktop.org Secret Service (requires graphical interface)
@@ -59,7 +52,7 @@ git config --global credential.helper manager
 > See https://aka.ms/gcm/credstores for more information.
 > ```
 
-To fix this:
+**To fix this:**
 
 ```bash
 git config --global credential.credentialStore secretservice
@@ -67,7 +60,7 @@ git config --global credential.credentialStore secretservice
 git config --global --unset credential.credentialStore
 ```
 
-Recheck the config:
+**Recheck the config:**
 
 ```bash
 git config -l
@@ -111,6 +104,4 @@ git config --global credential.helper manager
 ---
 ## Situation Room
 
----
-## Reference
 

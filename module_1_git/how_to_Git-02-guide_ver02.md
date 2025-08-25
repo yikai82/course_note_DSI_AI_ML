@@ -23,12 +23,14 @@
 * [3. Restore a document from other GitHub Repo (Day 3)](#3-restore-a-document-from-other-github-repo-day-3)
 * [4. Merge/Pull other document from Git Repo (Day 3)](#4-mergepull-other-document-from-git-repo-day-3)
 * [5. Cohort7 -production level madness](#5-cohort7--production-level-madness)
-* **[Situation Room - 🚨](#situation-room-)**
+* **[Situation Room 🚨](#situation-room-)**
 
 ## System
-Description:	Kubuntu-T2 24.04.2 LTS
-Release:	24.04
-Codename:	noble
+
+<a href="" style="background-color:616161; color:white; padding:0px 9px; border-radius:4px; font-weight:bold; text-decoration:none;">Linux</a>  Kubuntu-T2 24.04.2 LTS  
+Release:	24.04  
+Codename:  <a href="" style="background-color:1B89D0; color:white; padding:0px 9px; border-radius:4px; font-weight:semi-bold; text-decoration:none;">noble</a>  
+Kernel Version: Linux 6.14.0-1-t2-noble
 
 ---
 ## Key Note and Important Concept
@@ -77,12 +79,11 @@ For example: `git log upstream/main` vs. `git push origin main`
 
 4. Want to delete unwanted repo? Just delete the repo on the GitHub (look for the **danger zone** under repo setting in GitHyb). After that, trash the local folder 😎  
 
-
 📌 When scrolling inside the `git log` pager, **space** to go forward, **b** to go back, **q** to quit.
 
 
-<!-- <a href="" style="background-color:61AD89; color:black; padding:0px 9px; border-radius:4px; font-weight:semi-bold; text-decoration:none;">BONUS:</a>  -->
-**BOUNS** 
+![BONUS](image/BONUS.svg)  
+
 1. Use **`git add .`** to add all the changes in the current folder
 
 
