@@ -13,9 +13,19 @@
 </p>
 
 ## System
-<a href="" style="background-color:616161; color:white; padding:0px 9px; border-radius:4px; font-weight:bold; text-decoration:none;">Linux</a>  Kubuntu-T2 24.04.2 LTS  
+
+<div align="left">
+  <div style="margin: 2px 0;">
+    <img src="image/Linux2.svg" alt="Linux" width="50" style="vertical-align: middle; margin-right: 6px;">
+    <span style="vertical-align: middle;">Kubuntu-T2 24.04.2 LTS</span>
+  </div>
+  <div style="margin: 2px 0;">
+    <img src="image/Noble.svg" alt="Noble" width="50" style="vertical-align: middle; margin-right: 6px;">
+    <span style="vertical-align: middle;">Codename: Noble</span>
+  </div>
+</div>  
+
 Release:	24.04  
-Codename:  <a href="" style="background-color:1B89D0; color:white; padding:0px 9px; border-radius:4px; font-weight:semi-bold; text-decoration:none;">noble</a>  
 Kernel Version: Linux 6.14.0-1-t2-noble
 
 ---
