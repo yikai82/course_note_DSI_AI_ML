@@ -18,6 +18,6 @@ $ Ignore bakup file
 *bkup*.md
 
 $ Ignore files:
-/module_2_sql/DSI-sql-Part_2.md
-/module_2_sql/DSI-sql-Part_3.md
-/module_2_sql/DSI-sql-Part_4.md
+module_2_sql/DSI-sql-Part_2.md
+module_2_sql/DSI-sql-Part_3.md
+module_2_sql/DSI-sql-Part_4.md
