@@ -269,7 +269,7 @@ FROM vendor;
 
 ---
 
-![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-911919) 
+![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-911919?style=for-the-badge) 
 ```sql
 -- list the product names and customer name which vendor has sold products to 
 SELECT
@@ -371,7 +371,7 @@ SELECT*FROM customer_purchases;  -- contains 4221 rows
 - It is important to decide which table should be the **FROM** table.  
 <br>  
   
-![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-911919) 
+![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-911919?style=for-the-badge) 
 ```sql	
 /* which vendor has sold products to a customer 
 ... and which product was it? 
