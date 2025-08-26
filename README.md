@@ -41,7 +41,7 @@
   </div>
 </div>  
 
-Release:	24.04
+Release:	24.04  
 Kernel Version: Linux 6.14.0-1-t2-noble
 
 
