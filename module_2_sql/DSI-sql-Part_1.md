@@ -15,15 +15,25 @@
 
 ---
 > [!NOTE]  
-> Start with ![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-911919) and 📌
+> Not sure where to start 😵‍💫😵‍💫 Try with ![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-911919) and **Pin** 📌
 
 
 
 ---
 ## System
-<a href="" style="background-color:616161; color:white; padding:0px 9px; border-radius:4px; font-weight:bold; text-decoration:none;">Linux</a>  Kubuntu-T2 24.04.2 LTS  
-Release:	24.04  
-Codename:  <a href="" style="background-color:1B89D0; color:white; padding:0px 9px; border-radius:4px; font-weight:semi-bold; text-decoration:none;">noble</a>  
+
+<div align="left">
+  <div style="margin: 2px 0;">
+    <img src="image/Linux2.svg" alt="Linux" width="50" style="vertical-align: middle; margin-right: 6px;">
+    <span style="vertical-align: middle;">Kubuntu-T2 24.04.2 LTS</span>
+  </div>
+  <div style="margin: 2px 0;">
+    <img src="image/Noble.svg" alt="Noble" width="50" style="vertical-align: middle; margin-right: 6px;">
+    <span style="vertical-align: middle;">Codename: Noble</span>
+  </div>
+</div>  
+
+Release:	24.04
 Kernel Version: Linux 6.14.0-1-t2-noble
 
 ---
@@ -61,7 +71,7 @@ git push origin assignment # Push the update to your GitHub fork's assignment br
 ```
 
 ---
-## Key notes during the live sections: 
+## 📌 Key notes during the live sections  
 1. Some PKs in the Farmers Market database are composite keys.  
 2. **Why do we need Primary Keys and Foreign Keys?**  
     - **Formalizing the relationship between PKs and FKs ensures that..**
@@ -71,7 +81,7 @@ git push origin assignment # Push the update to your GitHub fork's assignment br
 3. Why use market_date as the PK in the vendor_inventory table for Farmers Market DB?  
 4. If there is no relationship between tables, you write a query for that. 
 5. Health Insurance person whose plan expired vs. his/her claim eligibility
-6. The flow is from a FK of a table to a PK of a related table. **Flow from FK --> PK**, we cannot delete the 2nd table until we delete the FK.  
+6. **ERD**: The flow is from a FK of a table to a PK of a related table. **Flow from FK --> PK**, we cannot delete the 2nd table until we delete the FK.  
 7. **Denormalization** sometimes helps us to build a better ERD -> better design
 8. **SQL Concept Map**  
 <br>
