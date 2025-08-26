@@ -2,7 +2,14 @@
   <img src="image/notebook.png" alt="" width="120">
 </p>
 
-<h1 align="center">DSI AI/ML Course Note</h1>
+<h1 align="center">U of T DSI AI/ML Course Note</h1>  
+
+---
+> [!NOTE]
+>  
+
+> [!IMPORTANT]  
+> 
 
 
 
@@ -14,11 +21,10 @@
   * [How to Git 🤓 - Part 2](/module_1_git/how_to_Git-02-guide_ver02.md)
 * [DB Brower for **SQLite**](/module_2_sql/)
   * [🛢️🛢️ SQLite - Part 1](/module_2_sql/DSI-sql-Part_1.md)
-  * add text
-  * add text
-  * add test
+  * ==> 🚧 🚧 🚧 🚧 🚧  Construction Zone  🚧 🚧 🚧 🚧 🚧 <==
+  
 
-* Python ==> 🚧 🚧 🚧 🚧 🚧  Construction Zone  🚧 🚧 🚧 🚧 🚧 <==
+<!-- * Python ==> 🚧 🚧 🚧 🚧 🚧  Construction Zone  🚧 🚧 🚧 🚧 🚧 <== -->
 
 ---
 
@@ -41,11 +47,11 @@ Kernel Version: Linux 6.14.0-1-t2-noble
 
 ---
 
-> [!NOTE]
+<!-- > [!WARNING]
 > 
 
-> [!WARNING]
-> 
 
  
-
+> [!NOTE]
+> 
+ -->
