@@ -34,23 +34,26 @@
 
 
 ## Contet html format
-- Module 1 - Git 
-  <div align="left">
-    <div style="margin: 3px 0;">
+- Module 1 - Git  
+  - <div align="left">
+    <div style="margin: 3px 0;">  
       <img src="image/Git-Icon-1788C.png" alt="Git" width="20" style="vertical-align: middle; margin-right: 6px;">
-      <a href="/module_1_git/how_to_Git-01-Setup.md" style="vertical-align: middle;"> &nbsp; How to Git-01-Setup 
+      <a href="/module_1_git/how_to_Git-01-Setup.md" style="vertical-align: middle;"> 
+      &nbsp;How to Git-01-Setup 
       </a>
     </div>
-  </div>
+    </div>
+  
 
-- Module 2 - SQL
-  <div>
+- Module 2 - SQL  
+  - <div>
     <div style="margin: 3px 0;">
       <img src="image/server.svg" alt="server" width="20" style="vertical-align: middle; margin-right: 6px;">
-      <a href="/module_2_sql/DSI-sql-Part_1.md" style="vertical-align: middle;"> SQL - Part 1
+      <a href="/module_2_sql/DSI-sql-Part_1.md" style="vertical-align: middle;"> 
+      &nbsp;SQL - Part 1
       </a>
     </div>
-  </div>  
+    </div>  
 
 
 ---
