@@ -6,11 +6,10 @@
 <h1 align="center">Module 1 – How to Git - Part 1 🤓 </h1>
 
 <p align="center">
-  🚀 Let's Get Ready (Day 1)<br>
-  <a href="#key-note-and-important-concept">Key Notes</a> •
-  <a href="#situation-room-" style="background-color:#9c4965; color:white; padding:0px 9px; border-radius:4px; font-weight:regular; text-decoration:none;">Situation Room</a> 
-  <!-- <a href="#other-references">References</a> -->
-</p>
+  🚀 Day 1: Let's Get Ready 🚀 <br>
+  <!-- <a href="#situation-room" style="background-color:#9c4965; color:white; padding:0px 9px; border-radius:4px; font-weight:regular; text-decoration:none;">Situation Room</a> 
+  <a href="#">References</a>
+</p> -->
 
 ## System
 
@@ -25,7 +24,7 @@
   </div>
 </div>  
 
-Release:	24.04  
+Release:	24.04 LTS  
 Kernel Version: Linux 6.14.0-1-t2-noble
 
 ---
@@ -112,6 +111,6 @@ git config --global credential.helper manager
   Specifies the backend GCM uses for storing credentials (compatible with GNOME Keyring / KDE Wallet).
 
 ---
-## Situation Room
+
 
 

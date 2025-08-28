@@ -6,7 +6,7 @@
 <h1 align="center">Module 1 – How to Git - Part 2 🤓 </h1>
 
 <p align="center">
-  🚀 Hands-on Git exercises (Day 2 & Day 3)<br>
+  🚀 Day 2 & Day 3: Hands-on Git exercises 🚀 <br>
   <a href="#key-note-and-important-concept">Key Notes</a> •
   <a href="https://www.youtube.com/watch?v=iYaQLl0zteA">FLY to Day 2 Recording</a> •
   <a href="https://www.youtube.com/watch?v=Urnl03YH6GU">FLY to Day 3 Recording</a> •
@@ -23,7 +23,7 @@
 * [3. Restore a document from other GitHub Repo (Day 3)](#3-restore-a-document-from-other-github-repo-day-3)
 * [4. Merge/Pull other document from Git Repo (Day 3)](#4-mergepull-other-document-from-git-repo-day-3)
 * [5. Cohort7 -production level madness](#5-cohort7--production-level-madness)
-* **[Situation Room 🚨](#situation-room-)**
+* **[Situation Room 🚨](#situation-room-)**  <--- got stuck? ⚓😣 check here first 
 
 ## System
 
@@ -38,14 +38,15 @@
   </div>
 </div>  
 
-Release:	24.04  
+Release:	24.04 LTS  
 Kernel Version: Linux 6.14.0-1-t2-noble
 
 ---
 ## Key Note and Important Concept
 
 > [!NOTE]
-> Always run **`git fetch`** before using git log for a log comparison as **`git fetch`** will update your local view of the remote history (without changing your working branch)  
+> Always run **`git fetch`** before using git log for a log comparison as **`git fetch`** will update your local view of the remote history (without changing your working branch) ----> same for `git push/git pull` as git fetch will update the change.  **Basic**: `git fetch ---> git log ---> git push/pull`
+
 >  
 >  **Direction matters** for log comparisons. For example  `git log [repo_site_1/branch_a]..[repo_site_2/branch_b]`  
 >  **➡️ It **only** checks if branch_a is ahead of  branch_b  ➡️ See [Situation 7](#situation-7-check-and-compare-if-there-is-any-difference-between-two-or-more-branches-in-terminal) for details.<br>**
@@ -58,7 +59,10 @@ Kernel Version: Linux 6.14.0-1-t2-noble
 >   <span style="font-size: 1.5em; font-weight: bold;">VS</span>  
 >   &nbsp;&nbsp;&nbsp;
 >   <img src="image/Wall-E-Wall-E.512.png" alt="robot" width="90">
-> </p>
+> </p>  
+> 
+
+**Disclaimer**: I have made every effort to ensure the accuracy of this document, but errors may still be present. Please proceed with caution.
 
 ### Key Concept
 
@@ -563,9 +567,6 @@ git switch [branch_name]
 git branch --set-upstream-to=origin/[branch-name]
 git push -u origin [branch_name]
 ```
-
-
-
 
 ---
 ### 📚 References:
