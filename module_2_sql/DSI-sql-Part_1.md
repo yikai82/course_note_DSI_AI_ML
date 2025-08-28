@@ -15,7 +15,7 @@
 
 ---
 > [!NOTE]  
-> Not sure where to start 😵‍💫😵‍💫 Try with ![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-911919) and **Pin** 📌
+> Not sure where to start 😵‍💫😵‍💫 Try with ![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-B00000) and **Pin** 📌
 
 
 
@@ -33,7 +33,7 @@
   </div>
 </div>  
 
-Release:	24.04
+Release:	24.04  LTS  
 Kernel Version: Linux 6.14.0-1-t2-noble
 
 ---
