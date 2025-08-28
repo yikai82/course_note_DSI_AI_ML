@@ -64,6 +64,7 @@ Kernel Version: Linux 6.14.0-1-t2-noble
 
 **Disclaimer**: I have made every effort to ensure the accuracy of this document, but errors may still be present. Please proceed with caution.
 
+---
 ### Key Concept
 
 1. Use `git status`, `git log`, `git remote -vv`, `git branch -a`, `git branch -vv`, and `git branch -rv` to check the status often - they’re your compass  🧭  
