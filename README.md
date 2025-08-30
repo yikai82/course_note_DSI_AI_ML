@@ -15,31 +15,18 @@
 > 
 
 ---
-## Content  
-<!-- Note the most bulletproof recipe is:  
-1. 📄 Docs/links → /path/... (absolute from repo root → stable on GitHub)  
-2. 🖼 Images → relative_path/image.png (relative → actually shows up everywhere) 
-->>>>> That way you avoid 95% of “why is my link broken” headaches. -->
-
-- Module 1 - Git  
-
-  - <img src="image/Git-Icon-1788C.png" width="16"> &nbsp; [how_to_Git-01-Setup](/module_1_git/how_to_Git-01-Setup.md)  
-  - <img src="image/Git-Icon-1788C.png" width="16"> &nbsp; [how_to_Git-02-Hand-On](/module_1_git/how_to_Git-02-guide_ver02.md)  
-
-- Module 2 - SQL  
-  - <img src="image/server.svg" width="20"> &nbsp; [how_to_Git-01-Setup](/module_1_git/how_to_Git-01-Setup.md)  
-  - <img src="image/server.svg" width="20"> &nbsp; [how_to_Git-02-Hand-On](/)  
-
-- Module 3 - ==> 🚧 🚧 🚧  Construction Zone 🚧 🚧 🚧 🚧 🚧 <==  
-
-
-## Contet html format
+## Content 
 - Module 1 - Git  
   - <div align="left">
     <div style="margin: 3px 0;">  
       <img src="image/Git-Icon-1788C.png" alt="Git" width="20" style="vertical-align: middle; margin-right: 6px;">
       <a href="/module_1_git/how_to_Git-01-Setup.md" style="vertical-align: middle;"> 
       &nbsp;How to Git-01-Setup 
+      </a>
+      <br>  
+      <img src="image/Git-Icon-1788C.png" alt="Git" width="20" style="vertical-align: middle; margin-right: 6px;">
+      <a href="/module_1_git/how_to_Git-02-guide_ver02.md" style="vertical-align: middle;"> 
+      &nbsp;How to Git-02-Hand-On 
       </a>
     </div>
     </div>

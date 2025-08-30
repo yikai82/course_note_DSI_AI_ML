@@ -6,6 +6,9 @@
 <h1 align="center">Module 1 – How to Git - Part 2 🤓 </h1>
 
 <p align="center">
+    <!-- <div style="font-size:18px; line-height:1.8; margin-bottom:10px;">
+    🚀 Day 2 & Day 3: Hands-on Git exercises 🚀
+  </div> -->
   🚀 Day 2 & Day 3: Hands-on Git exercises 🚀 <br>
   <a href="#key-note-and-important-concept">Key Notes</a> •
   <a href="https://www.youtube.com/watch?v=iYaQLl0zteA">FLY to Day 2 Recording</a> •
