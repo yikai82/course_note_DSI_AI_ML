@@ -1,23 +1,60 @@
-# Ignore Python cache
-__pycache__/
-*.pyc
+## .gitignore 2025-08-30
 
-# Ignore virtual env
+# =========================================
+# Python cache / build artifacts
+# =========================================
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+
+
+# =========================================
+# Virtual environments
+# =========================================
 .venv/
+venv/
+ENV/
 env/
 
-# Ignore data or large files
-*.zip
-*.csv
 
-# Ignore system files
-.DS_Store
+# =========================================
+# Jupyter Notebook
+# =========================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+
+# =========================================
+# LibreOffice / OpenOffice lock files
+# =========================================
+.~lock.*#
+
+
+# =========================================
+# OS-specific junk
+# =========================================
+.DS_Store         # macOS
+Thumbs.db         # Windows
 *.swp
 
-$ Ignore bakup file
-*bkup*.md
 
-$ Ignore files:
+# =========================================
+# Project-specific temp / notes
+# =========================================
+*.log
+*.tmp
+*.bak
+*.swp
+
+
+# =========================================
+# Temporary Specific files
+# =========================================
+*bkup*.md
 module_2_sql/DSI-sql-Part_2.md
 module_2_sql/DSI-sql-Part_3.md
 module_2_sql/DSI-sql-Part_4.md
