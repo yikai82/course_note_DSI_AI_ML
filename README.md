@@ -21,16 +21,17 @@
     <div style="margin: 3px 0;">  
       <img src="image/Git-Icon-1788C.png" alt="Git" width="20" style="vertical-align: middle; margin-right: 6px;">
       <a href="/module_1_git/how_to_Git-01-Setup.md" style="vertical-align: middle;"> 
-      &nbsp;How to Git-01-Setup 
-      </a>
-      <br>  
+        &nbsp;How to Git-01-Setup </a>  
+
+  - <div align="left">
+    <div style="margin: 3px 0;">  
       <img src="image/Git-Icon-1788C.png" alt="Git" width="20" style="vertical-align: middle; margin-right: 6px;">
       <a href="/module_1_git/how_to_Git-02-guide_ver02.md" style="vertical-align: middle;"> 
-      &nbsp;How to Git-02-Hand-On 
-      </a>
-    </div>
-    </div>
-  
+      &nbsp;How to Git-02-Hand-On </a>
+
+      </div>
+    </div>  
+
 
 - Module 2 - SQL  
   - <div>
