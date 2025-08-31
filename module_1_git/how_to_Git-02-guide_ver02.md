@@ -14,11 +14,11 @@
   <a href="https://www.youtube.com/watch?v=iYaQLl0zteA">FLY to Day 2 Recording</a> •
   <a href="https://www.youtube.com/watch?v=Urnl03YH6GU">FLY to Day 3 Recording</a> •
   <a href="#situation-room-" style="background-color:#9c4965; color:white; padding:0px 9px; border-radius:4px; font-weight:regular; text-decoration:none;">Situation Room</a> • 
-  <a href="#other-references">References</a>
+  <a href="#-references">References</a>
 </p>
 
 ---
-## This note covers the exercise on the day 2 and day 3 after the setup 
+## This note covers the exercise on the day 2 and day 3 after the setup. 
 
 * [Key Note and Important Concept](#key-note-and-important-concept)
 * [1. Create a Local Git Repo and Link It to GitHub (Day 2)](#1-create-a-local-git-repo-and-link-it-to-github-day-2)
@@ -47,19 +47,17 @@ Kernel Version: Linux 6.14.0-1-t2-noble
 ---
 ## Key Note and Important Concept
 
-> [!NOTE]
-> Always run **`git fetch`** before using git log for a log comparison as **`git fetch`** will update your local view of the remote history (without changing your working branch) ----> same for `git push/git pull` as git fetch will update the change.  **Basic**: `git fetch ---> git log ---> git push/pull`
+> [!NOTE]  
+> 1. Always run **`git fetch`** before using git log for a log comparison as **`git fetch`** will update your local view of the remote history (without changing your working branch) ----> same for `git push/git pull` as git fetch will update the change.  
+> 2. **Basic**: `git fetch ---> git log ---> git push/pull`  
+> 3. **Direction matters** for log comparisons. For example  `git log [repo_site_1/branch_a]..[repo_site_2/branch_b]` **➡️ It **only** checks if branch_a is ahead of  branch_b  ➡️ See [Situation 7](#situation-7-check-and-compare-if-there-is-any-difference-between-two-or-more-branches-in-terminal) for details.<br>**
 
->  
->  **Direction matters** for log comparisons. For example  `git log [repo_site_1/branch_a]..[repo_site_2/branch_b]`  
->  **➡️ It **only** checks if branch_a is ahead of  branch_b  ➡️ See [Situation 7](#situation-7-check-and-compare-if-there-is-any-difference-between-two-or-more-branches-in-terminal) for details.<br>**
-
-> [!WARNING]
+> [!WARNING]  
 > Don’t confuse your **local repo** with your **remote repo** on GitHub. They are two separate worlds.  
 > <p align="center">
 >   <img src="image/Dragon.png" alt="dragon" width="90">  
 >   &nbsp;&nbsp;&nbsp;
->   <span style="font-size: 1.5em; font-weight: bold;">VS</span>  
+>   <span style="font-size: 2.5em; font-weight: bold;">VS</span>  
 >   &nbsp;&nbsp;&nbsp;
 >   <img src="image/Wall-E-Wall-E.512.png" alt="robot" width="90">
 > </p>  
@@ -77,7 +75,7 @@ Kernel Version: Linux 6.14.0-1-t2-noble
     main         c555065 [origin/main] Merge pull request no.202 from UofT-DSI/update
     ```
 
-2. Git only tracks files. If you upload a file inside a folder from a local repo to the GitHub, the folder will be added to the remote repo -- This is because GitHub doesn’t track **empty folders**. It, however, *remember tha path* for the files it tracks
+2. Git only tracks files. If you upload a file inside a folder from a local repo to the GitHub, the folder will be added to the remote repo -- This is because GitHub doesn’t track **empty folders**. It, however, *remember the path* for the files it tracks
 
 3. Only git log is using syntax [repo_name/branch]; other git function will use repo_name branch.  
 For example: `git log upstream/main` vs. `git push origin main`
@@ -101,6 +99,7 @@ For example: `git log upstream/main` vs. `git push origin main`
 ![BONUS](image/BONUS.svg)  
 
 1. Use **`git add .`** to add all the changes in the current folder
+2. Use **`git checkout`** to temporary look at the specific commit ----> Good for inspection or temporary testing
 
 
 <sub>[↥ back to top](#)</sub>
