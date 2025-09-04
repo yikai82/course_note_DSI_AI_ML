@@ -52,7 +52,37 @@ Kernel Version: Linux 6.14.0-1-t2-noble
 > [!NOTE]  
 > 1. Always run **`git fetch`** before using git log for a log comparison as **`git fetch`** will update your local view of the remote history (without changing your working branch) ----> same for `git push/git pull` as git fetch will update the change.  
 > 2. **Basic**: `git fetch ---> git log ---> git push/pull`  
-> 3. **Direction matters** for log comparisons. For example  `git log [repo_site_1/branch_a]..[repo_site_2/branch_b]` **➡️ It **only** checks if branch_a is ahead of  branch_b  ➡️ See [Situation 7](#situation-7-check-and-compare-if-there-is-any-difference-between-two-or-more-branches-in-terminal) for details.<br>**
+> 3. **Direction matters** for log comparisons. For example, `git log [repo_site_1/branch_a]..[repo_site_2/branch_b]` **➡️ It **only** checks if branch_a is ahead of  branch_b  ➡️ See [Situation 7](#situation-7-check-and-compare-if-there-is-any-difference-between-two-or-more-branches-in-terminal) for details.  
+> 4. Want to delete an unwanted repo? Just delete the repo on GitHub (look for the **danger zone** under repo settings in GitHub). After that, trash the local folder 😎  
+> 📌 When scrolling inside the `git log` pager, **space** to go forward, **b** to go back, **q** to quit.  
+<br>
+
+>  [!IMPORTANT]  
+>  1. Use `git status`, `git log`, `git remote -vv`, `git branch -a`, `git branch -vv`, and `git branch -rv` to check the status often - they’re your compass  🧭   
+>  ```bash
+>    $ git branch -vv # show the connection between local and its link upstream
+>    assignment-1 b401131 [origin/assignment-1] Merge pull request no.220 from UofT-DSI/update
+>    main         c555065 [origin/main] Merge pull request no.202 from UofT-DSI/update
+>   ```  
+>
+>  2. Git only tracks files. If you upload a file inside a folder from a local repo to the GitHub, the folder will be added to the remote repo -- This is because GitHub doesn’t track **empty folders**. It, however, *remember the path* for the files it tracks  
+> 3. Only git log is using **syntax [repo_name/branch]**; other git function will use repo_name branch.  For example: `git log upstream/main` vs. `git push origin main`  
+> 4. **Check you head and the branches using `git log`**
+> 
+>  ```  
+>  Terminal Output:
+>  ```bash
+>  "HEAD -> assignment-two, origin/assignment-two, origin/assignment-one, assignment-one".
+>  ```
+> In the example above, the HEAD point to assignment-two. There are a total of **four branches**, including assignment-one and assignment-two are two local branches, while origin/assignment-one and origin/assignment-two are two remote branches on GitHub.  
+   
+ 
+
+![BONUS](image/BONUS.svg)  
+
+1. Use **`git add .`** to add all the changes in the current folder
+2. Use **`git checkout`** to temporary look at the specific commit ----> Good for inspection or temporary testing
+  
 
 > [!WARNING]  
 > Don’t confuse your **local repo** with your **remote repo** on GitHub. They are two separate worlds.  
@@ -66,42 +96,6 @@ Kernel Version: Linux 6.14.0-1-t2-noble
 > 
 
 **Disclaimer**: *I have made every effort to ensure the accuracy of this document, but errors may still be present. Please proceed with caution.*
-
----
-### Key Concept
-
-1. Use `git status`, `git log`, `git remote -vv`, `git branch -a`, `git branch -vv`, and `git branch -rv` to check the status often - they’re your compass  🧭  
-    ```bash
-    $ git branch -vv # show the conncetion between local and its link upstream
-    assignment-1 b401131 [origin/assignment-1] Merge pull request no.220 from UofT-DSI/update
-    main         c555065 [origin/main] Merge pull request no.202 from UofT-DSI/update
-    ```
-
-2. Git only tracks files. If you upload a file inside a folder from a local repo to the GitHub, the folder will be added to the remote repo -- This is because GitHub doesn’t track **empty folders**. It, however, *remember the path* for the files it tracks
-
-3. Only git log is using syntax [repo_name/branch]; other git function will use repo_name branch.  
-For example: `git log upstream/main` vs. `git push origin main`
-
-4. **DO NOT** get confused a *local repo* and a *remote repo*: These are total two different things.  
-    For example: 
-    ```Bash
-    git log 
-    ```  
-    Terminal Output:
-    ```bash
-    "HEAD -> assignment-two, origin/assignment-two, origin/assignment-one, assignment-one".
-    ```
-    In the example above, the HEAD point to assignment-two. There are a total of **four branches**, including assignment-one and assignment-two are two local branches, while origin/assignment-one and origin/assignment-two are two remote branches on GitHub.
-
-4. Want to delete unwanted repo? Just delete the repo on the GitHub (look for the **danger zone** under repo setting in GitHyb). After that, trash the local folder 😎  
-
-📌 When scrolling inside the `git log` pager, **space** to go forward, **b** to go back, **q** to quit.
-
-
-![BONUS](image/BONUS.svg)  
-
-1. Use **`git add .`** to add all the changes in the current folder
-2. Use **`git checkout`** to temporary look at the specific commit ----> Good for inspection or temporary testing
 
 
 <sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>
