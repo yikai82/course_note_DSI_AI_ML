@@ -1,9 +1,26 @@
+<p align="center">
+  <img src="image/server.svg" alt="XXX Logo" width="120">
+</p>
+
+#
+<h1 align="center">
+  DSI AI/ML Course <br>
+  Module 2 – SQL - Part 1</h1>
+
+<p align="center">
+  <!-- [INSERT TEXT]<br> -->
+  <a href="#3-join">ALL about JOIN</a> •
+  <a href="https://www.youtube.com/watch?v=E8Mx-L5OvNM">FLY to Day 1 Live Section</a> •
+  <a href="https://www.youtube.com/watch?v=ZFFHCdu7h2s">FLY to Day 2 Live Section</a> •
+  <a href="#-resources">Resources</a>
+</p>
+
+
 # Module 2 – SQL Part 1 
 
-### ![server](image/server.svg)  This note covers the activity during **[day 1](https://www.youtube.com/watch?v=ZFFHCdu7h2s) & [day 2](https://www.youtube.com/watch?v=E8Mx-L5OvNM) of the SQL live section** 
+### The content below was covered during the Day 1 and Day 2 of the SQL Live Section. ---> Video link at the top ☝️
 
 * [Requirement](#requirement)  
-* [Key notes during the live sections](#key-notes-during-the-live-sections)  
 * [1. SQL Database](#1-sql-database)
 * [2. Basic commands](#2-common-commands)  
   * [2.1 `SELECT...FROM`, `Order by`, `like`, `limit`, `where`](#21-select-order-by-like-limit-where)  
@@ -15,8 +32,8 @@
 
 ---
 > [!NOTE]  
-> Not sure where to start 😵‍💫😵‍💫 Try with ![Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-B00000) and **Pin** 📌
-
+> 1. SQL = Structured Query Language  
+> 2. Not sure where to start 😵‍💫😵‍💫 Try lookfing for [++Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-B00000) and **Pin** 📌
 
 
 ---
@@ -420,18 +437,8 @@ JOIN vendor as v
 
 <sub>[↥ back to top](#)</sub>
 
-
 ---
-<!-- ### Parking Lot
-
-###  🚧 🚧 🚧 🚧 🚧  Construction Zone  🚧 🚧 🚧 🚧 🚧
-
-
----
-### ✅ 
-
-
-
----
-### 📚 Other References:
-1. []() -->
+### 📚 Resources:
+1. [U of T DSI GitHub/sql](https://github.com/UofT-DSI/sql)
+2. [SQLite Tutorial](https://www.sqlitetutorial.net/)
+3. [W3resource/SQLite Tutorial](https://www.w3resource.com/sqlite/)
