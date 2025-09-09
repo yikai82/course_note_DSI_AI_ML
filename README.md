@@ -6,7 +6,8 @@
 
 ---
 > [!NOTE]
->  
+> 1. I didn’t really make a specific note for **shell**, since I’ve been living in Linux full-time for about 8 months now—ever since my MBP2019 went into survival mode 🏥 back in December 2024. Brought it back to life with Linux-T2 → check out my repo Kubuntu-T2!
+> 2. 
 
 > [!IMPORTANT]  
 > 
@@ -64,33 +65,7 @@ Kernel Version: Linux 6.14.0-1-t2-noble
 
 ---  
 
+<!-- ### note for shell 
 
-
-<!-- Parking Lot
-
-
-* [Let's Git ](/module_1_git/)
-  * [How to Git 🤓 - Part 1](/module_1_git/how_to_Git-01-Setup.md)
-  * [How to Git 🤓 - Part 2](/module_1_git/how_to_Git-02-guide_ver02.md)
-* [DB Brower for SQLite](/module_2_sql/)
-  * [🛢️🛢️ SQLite - Part 1](/module_2_sql/DSI-sql-Part_1.md)
-  * ==> 🚧 🚧 🚧 🚧 🚧  Construction Zone  🚧 🚧 🚧 🚧 🚧 <== -->
-
-
-
-> [!WARNING]
-> 
-
-
-
-### note for shell 
-
-Using ./myscript.sh is the safe + explicit way because:
-
-It tells the shell (and sudo): “run the file that’s right here in my current directory”.
-
-It avoids any ambiguity with other commands that might have the same name somewhere else in $PATH.
-
-It works consistently whether you’re running as your user or with sudo.
-
-Think of ./ as saying “don’t wander off, just look right under my feet.” 😏
+1. When you use sudo, the PATH starts from the root directory /, since that’s where the superuser lives. 👑  
+    - Using ./myscript.sh is the safe + explicit way because: It tells the shell (and sudo): “run the file that’s right here in my current directory”. It avoids any ambiguity with other commands that might have the same name somewhere else in $PATH. It works consistently whether you’re running as your user or with sudo. Think of ./ as saying “don’t wander off, just look right under my feet.” 😏 -->
