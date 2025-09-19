@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="20">
+  <linearGradient id="smooth" x2="0" y2="100%">
+    <stop offset="0" stop-color="#61AD89" stop-opacity=".7"></stop>
+    <stop offset="1" stop-color="#61AD89" stop-opacity=".7"></stop>
+  </linearGradient>
+  <rect rx="3" width="60" height="20" fill="#61AD89"></rect>
+  <rect rx="3" width="60" height="20" fill="url(#smooth)"></rect>
+  <g fill="#000000" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">
+    <text x="30" y="14">BONUS</text>
+  </g>
+</svg>
