@@ -742,8 +742,8 @@ Calculation:
     1. Create multiple classifiers by varying parameter values and splitting data into multiple subsets or "folds." 
     2. Evaluate each classifier on validation results to determine the best parameter value. 
     3. Instead of random splits, use a more systematic approach where each observation is in a validation set only once.  
-      i. Split the training data into evenly sized chunks.  
-      ii. Iteratively use one chunk as the validation set and the remaining chunks as the training set.  
+      (1) Split the training data into evenly sized chunks.  
+      (2). Iteratively use one chunk as the validation set and the remaining chunks as the training set.  
     4. This ensures that each observation is used for validation exactly once and for training $C - 1$ times.
 
 
