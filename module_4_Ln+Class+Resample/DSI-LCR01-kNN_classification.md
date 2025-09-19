@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="[insert XXX IMAGE URL]" alt="Image Place" width="120">
+  <img src="image/Icon_KNN4.png" alt="Image Place" width="200">
 </p>
 
 #
@@ -79,7 +79,7 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 > 6. Supervise Learning vs Unsupervised Learning.  
 >  
 > 7. *k*NN: k-Nearest Neighbors:  
->     - ***k***: What is ***k***? What does it mean when ***k***= 1 vs ***k***= 5 or ***k*** = ?---> See [**Section *k*NN**](#3-k-nearest-neighbors-methodknn-️).  
+>     - ***k***: What is ***k***? What does it mean when ***k***= 1 vs ***k***= 5 or ***k*** = ?---> See [**Section *k*NN**](#kneighborsclassifier).  
 >     - Distance: *k*NN uses a distance metric (e.g., Euclidean, Manhattan, or Murkowski) to calculate the similarity between points.   
 >       - **Euclidean** uses the straight line between the two data points --> more suitable for continuous variables.   
 >       - **Manhattan** calculates the block distance --> more suitable for ordinal data.      
@@ -541,7 +541,7 @@ plt.show()
       <br>  
 
     ![EXAMPLES-BLUE](https://img.shields.io/badge/EXAMPLES-496C9C)
-    * [***k*NN Classification with Wine**](#12-knn-example-wine-classification)
+    * ***k*NN Classification with Wine** [Check here, section 2.2 ](/module_4_Ln+Class+Resample/DSI-LCR_master_cheat_sheet..md)
 
       ```python
       knn = KNeighborsClassifier(7)   # initiate an kNN object 
