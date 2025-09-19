@@ -32,7 +32,7 @@
   * [2.3 Panda/Numpy Functions](#23-pandanumpy-functions)
   * [2.4 scikit-learn Function](#24-scikit-learn-functions)
 
-* [3. 💡 Concept: K-nearest Neighbors Method(kNN)](#2-k-nearest-neighbors-methodknn)  
+* [3. 💡 Concept: *k*-Nearest Neighbors Method(*k*-NN)](#2-k-nearest-neighbors-methodknn)  
 * [4. 💡 Concept: Model Validation](#4-model-validation) 
 
 
@@ -121,6 +121,9 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 > 3. `df_name_new = df_name_ori` creates alias for the dataframe. To copy a new dataframe, use `_.copy()`.
 > 4. 🚨 **Mean imputation** works well **only if** the missing data is random and small size. Moreover, severely reduce the spread could lead to misinterpret the source information and can have significant impact on the accuracy. 
 
+<br>  
+
+**Disclaimer**: *I have made every effort to ensure the accuracy of this document, but errors may still be present. Feel free to leave comments and I will address them. Thank you!*
 
 <sub>[↥ back to top](#content)</sub>
 
