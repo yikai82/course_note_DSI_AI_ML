@@ -5,14 +5,14 @@
 #
 <h1 align="center">
   DSI ML/AI Course <br>
-  Module 4.1 – kNN Classification with 🐍  
+  Module 4.1 &ndash; <i>k</i>&#8209;NN Classification with 🐍  
   </h1>
 
 <p align="center">
   <a href="#key-note-and-important-concept">Key Notes</a> •
   <a href="https://tinyurl.com/5ekh22u6">Fly to Day 1 Recording</a> •
   <a href="https://tinyurl.com/mwc9jdzm">Fly to Day 2 Recording</a> •
-  <a href="https://python.datasciencebook.ca/index.html">Textook</a> •
+  <a href="https://python.datasciencebook.ca/index.html">Textbook</a> •
   <a href="#resources">Resouces</a><br>
   <br>
   **Day 1 live coding started at 1:00 hr mark; Day 2 live coding started at 44:34** <br>
@@ -25,15 +25,16 @@
 * [Key Note and Important Concept](#key-note-and-important-concept)   
 * [1. Cheat Sheet and Play Book](#1-cheat-sheet-and-️️-play-book)
   * [**1.1 Standard workflow** 📕](#11-standard-workflow)
-  * [1.2 kNN example: **Wisconsin Breast Cancer** 🧪🔬 ](#12-knn-example-wisconsin-breast-cancer)
+  * [1.2 *k*-NN example: **Wisconsin Breast Cancer** 🧪🔬 ](#12-knn-example-wisconsin-breast-cancer)
 * [2. Most Common Used](#2-most-used-libraries-and-functions)
   * [2.1 Libraries](#21-libraries)  
   * [2.2 Python Function RECAP](#22-python-function-recap) 
   * [2.3 Panda/Numpy Functions](#23-pandanumpy-functions)
   * [2.4 scikit-learn Function](#24-scikit-learn-functions)
 
-* [3. 💡 Concept: K-nearest Neighbors Method(KNN)](#2-k-nearest-neighbors-methodknn)  
+* [3. 💡 Concept: K-nearest Neighbors Method(kNN)](#2-k-nearest-neighbors-methodknn)  
 * [4. 💡 Concept: Model Validation](#4-model-validation) 
+
 
 ---
 ## System
@@ -77,17 +78,17 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 >    - Data leakage:       
 > 6. Supervise Learning vs Unsupervised Learning.  
 >  
-> 7. KNN: K-nearest neighbors:  
->     - K: What is K? What does it mean when K = 1 vs K = 5 or K = ?---> See [**Section kNN**](#3-k-nearest-neighbors-methodknn-️).  
->     - Distance: KNN uses a distance metric (e.g., Euclidean, Manhattan, or Murkowski) to calculate the similarity between points.   
+> 7. *k*NN: k-Nearest Neighbors:  
+>     - ***k***: What is ***k***? What does it mean when ***k***= 1 vs ***k***= 5 or ***k*** = ?---> See [**Section *k*NN**](#3-k-nearest-neighbors-methodknn-️).  
+>     - Distance: *k*NN uses a distance metric (e.g., Euclidean, Manhattan, or Murkowski) to calculate the similarity between points.   
 >       - **Euclidean** uses the straight line between the two data points --> more suitable for continuous variables.   
->       - **Manhattan** calculates the block distance --> more suitable for ordinal data.    
->     - ⚠️ **Limitation**: Sensitive to missing value --> KNN requires access to all values in the training data.      
+>       - **Manhattan** calculates the block distance --> more suitable for ordinal data.      
+>    - ⚠️ **Limitation**: Sensitive to missing value --> *k*NN requires access to all values in the training data.      
 > 8. Data Validation:
 >     - **Cross-Validation**: keep each set of training set a chance to be a validation set --> See [**Section 4**](#42-cross-validation).
 > 9. Data Standardization: centering, scaling ---> See [**Section 3**](#32-variable-standardization).
 > 
-> 10. Imbalance: occurs when one label is much more common than another in a dataset. This is due to KNN method inherent a bias from its **majority rules**.  
+> 10. Imbalance: occurs when one label is much more common than another in a dataset. This is due to *k*NN method inherent a bias from its **majority rules**.  
 **Note**: No consensus on for the ratio. For classifying into 2 variables: 90:10 or 80:20 can be considerred imbalance.
 >     
 
@@ -109,13 +110,13 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 > 7. `GridSearchCV()`: help to identify the best K value and hold on to it. You dont need to set k = n  
 > 8. **Missing Data**: is very common and is challenging. Most time, it requires SME to know the data, setting, and collection method.  
 >    - Can be **informative**, should not be ignored 
->    - KNN requires access to the all values in the training data 
->    - KNN with handling the missing data: (1) remove; (2) estimate --> the common method is **mean imputation**, which assumes the missing data is **random**     
+>    - *k*NN requires access to the all values in the training data 
+>    - *k*NN with handling the missing data: (1) remove; (2) estimate --> the common method is **mean imputation**, which assumes the missing data is **random**     
 
 
 
 > [!WARNING]  
-> 1. **kNN classification is based on distance calculation** so the inputs need to be numeric and cannot handle missing value --> check if all the data points are **non-NULL.** 
+> 1. ***k*NN classification is based on distance calculation** so the inputs need to be numeric and cannot handle missing value --> check if all the data points are **non-NULL.** 
 > 2. Do **not** use the test set during tuning. *Tuning is part of model training, not model evaluation*.
 > 3. `df_name_new = df_name_ori` creates alias for the dataframe. To copy a new dataframe, use `_.copy()`.
 > 4. 🚨 **Mean imputation** works well **only if** the missing data is random and small size. Moreover, severely reduce the spread could lead to misinterpret the source information and can have significant impact on the accuracy. 
@@ -149,7 +150,7 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 <sub>[↥ back to top](#content)</sub>
 
 ---
-### 1.2 kNN example: Wisconsin Breast Cancer
+### 1.2 *k*NN example: Wisconsin Breast Cancer
 
 ```python
 ## Import library
@@ -513,9 +514,9 @@ plt.show()
 ---
 5. #### `KNeighborsClassifier()`:
     - `knn = KNeighborsClassifier(k)`: Sets k, which represents the number neighbors to look at when classifying/regressing a new point.
-    - `knn.fit()` : Fits the data and trains a kNN model 
+    - `knn.fit()` : Fits the data and trains a *k*NN model 
     - `knn.predict()`: uses the trained model to predict the labels for new data.
-    - `knn.kneighbors()`: Finds the K-nearest neighbors for a given set of data points in a fitted K-Nearest Neighbors (KNN) model.  
+    - `knn.kneighbors()`: Finds the K-nearest neighbors for a given set of data points in a fitted K-Nearest Neighbors (*k*NN) model.  
     - **`knn.score(X, y, sample_weight=None)`**: Returns the mean accuracy on the given test data and labels.  
       * X : array-like of shape (n_samples, n_features), or None Test samples. 
       * y : array-like of shape (n_samples,) or (n_samples, n_outputs) True labels for `X`.
@@ -537,7 +538,7 @@ plt.show()
       <br>  
 
     ![EXAMPLES-BLUE](https://img.shields.io/badge/EXAMPLES-496C9C)
-    * [**kNN Classification with Wine**](#12-knn-example-wine-classification)
+    * [***k*NN Classification with Wine**](#12-knn-example-wine-classification)
 
       ```python
       knn = KNeighborsClassifier(7)   # initiate an kNN object 
@@ -636,11 +637,11 @@ plt.show()
 <sub>[↥ back to top](#content)</sub> 
 
 ---
-## 3. K-nearest Neighbors Method(kNN) 🗳️ 
+## 3. K-nearest Neighbors Method(*k*NN) 🗳️ 
 
 ### 3.1 Concept  
 
-1. KNN is a simple, supervised machine learning (ML) algorithm that can be used for classification or regression tasks.It finds the "nearest" or "most similar" observations in the training set to predict a new observation's label.---> majority vote!! 🗳️  
+1. *k*NN is a simple, supervised machine learning (ML) algorithm that can be used for classification or regression tasks.It finds the "nearest" or "most similar" observations in the training set to predict a new observation's label.---> majority vote!! 🗳️  
    - **"Closest"** can be measured by calculating the straight-line between points, known as distance.  
    - **Sensivity**  
    - K is a predefined number of neighbors considered for classification.   
