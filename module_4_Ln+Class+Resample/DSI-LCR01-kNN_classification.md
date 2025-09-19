@@ -25,7 +25,7 @@
 * [Key Note and Important Concept](#key-note-and-important-concept)   
 * [1. Cheat Sheet and Play Book](#1-cheat-sheet-and-️️-play-book)
   * [**1.1 Standard workflow** 📕](#11-standard-workflow)
-  * [1.2 kNN example: Wine Classification 🍷](#12-knn-example-wine-classification)
+  * [1.2 kNN example: **Wisconsin Breast Cancer** 🧪🔬 ](#12-knn-example-wisconsin-breast-cancer)
 * [2. Most Common Used](#2-most-used-libraries-and-functions)
   * [2.1 Libraries](#21-libraries)  
   * [2.2 Python Function RECAP](#22-python-function-recap) 
@@ -60,6 +60,7 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 > 1. Regression vs Classification  
 >     -  **Regression**: to predict **numeric** values ---> *Prediction is an educational guess*.   
 >     -  **Classification**: to predict **categorical** values or labels. 
+>     - Both Regression and Classification are **supervised** Machine Learning
 > 2. Classification: Creates categorical variables or **labels**. 
 > 3. Prediction vs Inference  
 >     - Prediction:  
@@ -67,29 +68,28 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 > 4. Model Training: Often uses 70% - 75% of the total data as training data. 
 >     - Training data contains both training set and validation set. 
 >     - Validation set: A test set in the training data.
->     - Typical ratio of **training set: validation = 0.75: 0.25** 
+>     - Typical ratio of **`training set: validation = 0.75: 0.25`** 
 >  
-> 5. Model evaluation: Only use **test data**, typically uses 30% of the total data ---> See [Section 4](#4-model-validation)     
+> 5. Model evaluation: Only use **test data**, typically uses 30% of the total data ---> See [**Section 4**](#4-model-validation)     
 >    - Accuracy:   
 >    - Precision: 
->    - Recall: How much positive we missed
+>    - Recall: 
 >    - Data leakage:       
 > 6. Supervise Learning vs Unsupervised Learning.  
 >  
 > 7. KNN: K-nearest neighbors:  
->     - K: What is K? What does it mean when K = 1 vs K = 5 or K = ?---> See [Section KNN](#2-k-nearest-neighbors-methodknn-️).  
+>     - K: What is K? What does it mean when K = 1 vs K = 5 or K = ?---> See [**Section kNN**](#3-k-nearest-neighbors-methodknn-️).  
 >     - Distance: KNN uses a distance metric (e.g., Euclidean, Manhattan, or Murkowski) to calculate the similarity between points.   
 >       - **Euclidean** uses the straight line between the two data points --> more suitable for continuous variables.   
 >       - **Manhattan** calculates the block distance --> more suitable for ordinal data.    
 >     - ⚠️ **Limitation**: Sensitive to missing value --> KNN requires access to all values in the training data.      
 > 8. Data Validation:
->     - **Cross-Validation**: keep each set of training set a chance to be a validation set --> See [Section X]().
-> 9. Data Standardization: centering, scaling ---> See [Section X](#22-variable-standardization).
+>     - **Cross-Validation**: keep each set of training set a chance to be a validation set --> See [**Section 4**](#42-cross-validation).
+> 9. Data Standardization: centering, scaling ---> See [**Section 3**](#32-variable-standardization).
 > 
 > 10. Imbalance: occurs when one label is much more common than another in a dataset. This is due to KNN method inherent a bias from its **majority rules**.  
 **Note**: No consensus on for the ratio. For classifying into 2 variables: 90:10 or 80:20 can be considerred imbalance.
 >     
-
 
 
 
@@ -103,9 +103,9 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 > 4. `train_test_split()`: Splits the data into training data and testing data. 
 >     - **Stratify**: Keeps the same proportions of categories (or classes) in your splits as in the full dataset 💡. --> See [**Section 1.4 scikit-learn/`train_test_split`**](#train_test_split)  
 >    
-> 5. Set random seed: When splitting the data between training data and testing data, it is crucial to set random seed. Make sure run `np.random.seed()` before `train_test_split()` --> See Here
+> 5. Set random seed: When splitting the data between training data and testing data, it is crucial to set random seed. Make sure run `np.random.seed()` before `train_test_split()` --> See [Here](#train_test_split)
 >    
-> 6. `cross_validate()`: 
+> 6. `cross_validate()`: See [Here](#cross-validation)
 > 7. `GridSearchCV()`: help to identify the best K value and hold on to it. You dont need to set k = n  
 > 8. **Missing Data**: is very common and is challenging. Most time, it requires SME to know the data, setting, and collection method.  
 >    - Can be **informative**, should not be ignored 
@@ -143,14 +143,16 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 3. k parameter tuning using `GridSearchCV()`
 4. `kNN.fit` and `kNN.predict` by initiate `knn = KNeighborsClassifier(*k_tuned*)`
 5. Model evaluation using confusion matrix, accuracy, precision, recall. See [Section 4](#4-model-validation)
+6. Inspect the result with K-Nearest Neighbors Performance Plot or other alternatives 
+
 
 <sub>[↥ back to top](#content)</sub>
 
 ---
-### 1.2 kNN example: Wine classification 
+### 1.2 kNN example: Wisconsin Breast Cancer
 
 ```python
-## import libraries 
+## Import library
 import pandas as pd
 import numpy as np
 from IPython.display import display
@@ -160,92 +162,99 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split, cross_validate, GridSearchCV
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, recall_score, precision_score
+from sklearn import datasets as ds
 
 # for plot
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 
 
-##### >>> play with wine dataset <<< #####
-from sklearn.datasets import load_wine
-wine_data = load_wine() # Load the Wine dataset
-wine_df = pd.DataFrame(wine_data.data, columns=wine_data.feature_names) # Convert to DataFrame
-wine_df['class'] = wine_data.target # Bind the 'class' (wine target) to the DataFrame
-wine_df
+### >>> 1. Data Import and Preprocess <<< ### 
 
-## column index fun
-print(f"The 1st column (index = 0) is {wine_df.columns[0]}" "\n"
-f"The 2nd column (index = 1) is {wine_df.columns[1]}")
+# import data
+cancer = ds.load_breast_cancer()
+cancer_df = pd.DataFrame(cancer.data, columns=cancer.feature_names)
+cancer_df['diagnosis'] = cancer.target
 
+# Check the data type of the Series content
+print("Data type of diagnosis column:", cancer_df['diagnosis'].dtype)
+print("First few values:", cancer_df['diagnosis'].head().tolist())
+print("Unique values:", cancer_df['diagnosis'].unique())
+display(cancer_df.head(20))
 
-### >>> 1. Data Standardization <<< ### 
-np.random.seed(123) # <<< set a random seed for reproducibility
-wine_stdz = wine_df.copy() # create a copied data frame
+##.replace() only works with str not int
+#$  use map to replace numbers with str, This cell block shoule  only run once as it will keep mapping.
+cancer_df['diagnosis'] = cancer_df['diagnosis'].map(
+    {0 : 'Malignant',
+     1 : 'Benign'})
 
-# type convert 
-wine_stdz["class"] = wine_stdz["class"].astype(str)
+cancer_df.info()
 
-# obtain the column that need to be scale
-# col_to_scale = wine_df.iloc[:, :-1]  # Use panda "Integer-Location" Based Indexing
-col_to_scale = wine_stdz.columns[:len(wine_stdz.columns)-1] ## index starting from **0** 
+# check if data is imbalance
+cancer_df["diagnosis"].value_counts(normalize= True)
 
-# initialize the scaler and standardize numeric column only
-scaler = StandardScaler()   
-wine_stdz[col_to_scale] = scaler.fit_transform(wine_stdz[col_to_scale])
-wine_train, wine_test = train_test_split(
-    wine_stdz, train_size= 0.75, stratify= wine_df["class"])
+### >>> 2. Standardize with numeric and Data Split  <<< #### 
+np.random.seed(1)
+cancer_stdz = cancer_df.copy()
+cancer_stdz2 = cancer_df.copy()
 
-print(f"{wine_test.head(10)}")
+## There are two ways of doing this :
+# (a) use col_to_scale  
+col_to_scale = cancer_stdz.columns[:len(cancer_stdz.columns)-1]
+scaler = StandardScaler()
+cancer_stdz[col_to_scale] = scaler.fit_transform(cancer_stdz[col_to_scale])
+display(cancer_stdz)
 
+# (b) use .selecct_dtypes() and .difference() method
+col_to_exclude = cancer_stdz2.select_dtypes(exclude= 'number').columns # kNN classification only works with numbers
+col_to_scale2 = cancer_stdz2.columns.difference(col_to_exclude)
+scaler2 = StandardScaler()
+cancer_stdz2[col_to_scale2] = scaler2.fit_transform(cancer_stdz2[col_to_scale2])
 
-### >>> 2. kNN classification step <<< ### 
-# 1) inititate knn object
-knn = KNeighborsClassifier() # default KNN = 5
+print(f"Data frame 'cancer_stdz' equal to 'cancer_stdz2 : {cancer_stdz.equals(cancer_stdz2)}")
 
-# 2) define n_neighbor  
-par_grid = {"n_neighbors": range(1,50)}
-
-# 3) conduct GridSerachCV
-wine_tune_grid = GridSearchCV(knn, par_grid, cv=10, verbose=1)
-
-wine_tune_grid.fit(wine_train[col_to_scale],
-                   wine_train["class"])
-accuracy_grid = pd.DataFrame(wine_tune_grid.cv_results_)
-accuracy_grid.head(10) # show the top 10 rows
-
-
-k_opt = wine_tune_grid.best_params_.get('n_neighbors')
-print('\n' 'The best result if when k =' f"{k_opt}")
+# data split 
+cancer_train, cancer_test = train_test_split(cancer_stdz, train_size= 0.75, stratify= cancer_df['diagnosis'])
 
 
-### >>> 3. kNN training + modeling <<< ###  
-# 1) set knn..
-knn = KNeighborsClassifier(7)
+### >>> 3. Initiate kNN Model to search for the best k <<< ### 
+knn = KNeighborsClassifier()
+par_grid = {'n_neighbors' : range(1,201,3)}
+cancer_grid = GridSearchCV(knn, par_grid, cv= 10, verbose = 1 )
 
-# 2) fit model 
-knn.fit(wine_train[col_to_scale],
-            wine_train["class"])
+X = cancer_train[["mean perimeter","mean concavity"]]; Y = cancer_train["diagnosis"]
+cancer_grid.fit(X,Y)
+accuracy_grid =pd.DataFrame(cancer_grid.cv_results_)
+display(accuracy_grid)
+k_tuned = cancer_grid.best_params_.get('n_neighbors')
+print('\n' 'The best result is when k =' f"{k_tuned}")
 
-# 3) predict 
-wine_test["predicted"] = knn.predict(wine_test[col_to_scale])
-display(wine_test[["class","predicted"]].head(10))
+### >>> 4. Model Fitting and Prediction <<< ###
+knn = KNeighborsClassifier(k_tuned)
+knn.fit(X, Y)
 
-### >>> 4. Model Evaluation <<< ### 
+cancer_test["predicted"] = knn.predict(cancer_test[["mean perimeter","mean concavity"]])
+display(cancer_test[["diagnosis","predicted"]].head(10))
+
+
+### >>> 5. Model Evaluation <<< ###
 # Confusion Matrix 
-table = pd.crosstab(wine_test["class"],
-            wine_test["predicted"],
+table = pd.crosstab(cancer_test["diagnosis"],
+            cancer_test["predicted"],
             rownames= ["Actual"],
             colnames=["Predicted"])
 print('\n' f"{table}")
 
-output = np.round(accuracy_score(wine_test["class"],wine_test["predicted"]),4)
-print('\n The accuracy is ' f"{output}")
+accuracy = np.round(accuracy_score(cancer_test["diagnosis"],cancer_test["predicted"]),4)
+precision = np.round(precision_score(cancer_test["diagnosis"], cancer_test["predicted"], pos_label= "Malignant"),4)
+recall = np.round(recall_score(cancer_test["diagnosis"], cancer_test["predicted"], pos_label = "Malignant"),4)
+print('\n The accuracy is ' f"{accuracy}")
+print('\n The precision is ' f"{precision}")
+print('\n The recall is ' f"{recall}")
 
 
-### >>> 5. Create a K-Nearest Neighbors Performance Plot <<< ### 
-# Create the plot
-plt.figure(figsize=(10, 8))
-
+### >>> 6. Create a K-Nearest Neighbors Performance Plot <<< ### 
+plt.figure(figsize=(10, 6))
 # Plot mean test scores with error bars
 plt.plot(accuracy_grid['param_n_neighbors'], accuracy_grid['mean_test_score'], '-o', color='blue')
 
@@ -255,6 +264,7 @@ plt.ylabel('Accuracy estimate')
 plt.title('K-Nearest Neighbors Performance')
 plt.tight_layout()
 plt.show()
+
 ```
 
 <sub>[↥ back to top](#content)</sub>
@@ -657,15 +667,15 @@ plt.show()
 
 1. In K-nearest neighbors classification, the **scale (distance)** of each variable affects predictions.  
 
-2. Variables with larger scales (e. g ., salary) have a bigger impact on distance calculations than variables with smaller scales (e.g., years of education).  
+2. Variables with larger scales (e.g., salary) have a bigger impact on distance calculations than variables with smaller scales (e.g., years of education).  
 
     - This means that variables with large scales might dominate the prediction process.  
     - *Example: a $1000 difference in salary affects distances more than a 10-year difference in education. However, in reality, 10 years of education might be more significant for predicting job type than a $1000 difference in salary.*  
-    - Scaling:  To ensure fair contribution from all variables, we performance **standardization** to scale and center data before entering it into the model:  
+    - **Scaling***: To ensure fair contribution from all variables, we performa **standardization** to scale and center data before entering it into the model:  
     
-      --> Find The difference between the observation and tmean (μ) and divide it by the standard deviation (σ) for each value.  
+      --> Find The difference between the observation and mean (μ) and divide it by the standard deviation (σ) for each value.  
       
-    - This tandardization adjusts the data so each variable has a mean of 0 and a standard deviation of 1, allowing the model to consider each variable equally based on its relationship to the outcome rather than its scale.
+    - This standardization adjusts the data so each variable has a mean of 0 and a standard deviation of 1, allowing the model to consider each variable equally based on its relationship to the outcome rather than its scale.
     
 3. Imbalance
 
@@ -714,10 +724,10 @@ Calculation:
 - Accuracy = (84+48)/total   
 - Precision (How much % positive are truly positive)= 48/(6+48)     
   **Inferential sense: How much % false positive do we have?**  
-  - FDR (False Discovery Rate) = 1 - Precision  
+  - **FDR (False Discovery Rate)** = 1 - Precision  
 - Recall (How much % positive we capture from the total true positive) = 48/(5+48)  
   **Inferential sense: How much positive we miss (false negative)**   
-  - Error Rate = 1 - Recall 
+  - **Error Rate** = 1 - Recall 
 
 <br>    
 
