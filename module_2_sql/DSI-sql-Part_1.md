@@ -2,7 +2,6 @@
   <img src="image/server.svg" alt="XXX Logo" width="120">
 </p>
 
-#
 <h1 align="center">
   DSI AI/ML Course <br>
   Module 2 – SQL - Part 1</h1>

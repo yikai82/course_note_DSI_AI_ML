@@ -2,7 +2,6 @@
   <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo" width="120">
 </p>
 
-#
 <h1 align="center"> 
   DSI AI/ML Course <br> 
   Module 1 – How to Git 📝 ⬇️ - Part 2 🤓 </h1>
@@ -29,6 +28,7 @@
 * [4. Merge/Pull other document from Git Repo (Day 3)](#4-mergepull-other-document-from-git-repo-day-3)
 * [5. Cohort7 -production level madness](#5-cohort7--production-level-madness)
 * **[Situation Room 🚨](#situation-room-)**  <--- got stuck? ⚓😣 check here first 
+* [Looking for just code, check out the **Git Daily Encounter *✍🏼📗***](/module_1_git/how_to_Git-03_daily_git_encouters-.md)
 
 ## System
 
@@ -95,7 +95,7 @@ Kernel Version: Linux 6.14.0-1-t2-noble
 > </p>  
 > 
 
-**Disclaimer**: *I have made every effort to ensure the accuracy of this document, but errors may still be present. Please proceed with caution.*
+**Disclaimer**: *I have made every effort to ensure the accuracy of this document, but errors may still be present. Feel free to leave comments and I will address them. Thank you!*
 
 
 <sub>[↥ back to top](#this-note-covers-the-exercise-on-the-day-2-and-day-3-after-the-setup)</sub>

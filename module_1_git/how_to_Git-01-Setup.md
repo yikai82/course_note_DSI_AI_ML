@@ -2,7 +2,6 @@
   <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo" width="120">
 </p>
 
-#
 <h1 align="center">Module 1 – How to Git - Part 1 🤓 </h1>
 
 <p align="center">

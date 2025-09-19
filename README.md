@@ -64,6 +64,22 @@
     </div>
     </div>   -->
 
+
+- Module 4 - Classification, Regression, and Bootstrapping 
+  - <div align="left">
+    <div style="margin: 3px 0;">
+      <img src="image/Icon_KNN4.png" alt="server" width="25" style="vertical-align: middle; margin-right: 6px;">
+      <a href="/module_4_Ln+Class+Resample/DSI-LCR01-kNN_classification.md" style="vertical-align: middle;"> 
+      &nbsp;  <i>k</i>‑NN Classification </a>
+
+  <!-- - <div align="left">
+    <div style="margin: 3px 0;">
+      <img src="image/python.512.png" alt="server" width="25" style="vertical-align: middle; margin-right: 6px;">
+      <a href="/module_2_sql/DSI-sql-Part_1.md" style="vertical-align: middle;"> 
+      &nbsp; Python - Part x  </a>
+    </div>
+    </div>   -->
+
 ---
 ## My System
 

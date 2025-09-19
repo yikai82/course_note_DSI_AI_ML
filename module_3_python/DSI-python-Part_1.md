@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="[insert XXX IMAGE URL]" alt="XXX Logo" width="120">
+  <img src="image/python.512.png" alt="Python" width="120">
 </p>     
 
 # 
@@ -79,9 +79,9 @@ Kernel Version: Linux 6.14.0-1-t2-nob
 
 🚨 Cannot access Jupyter Notebook in VS Code? Try Google Colab
 
-**Disclaimer**: *I have made every effort to ensure the accuracy of this document, but errors may still be present. Please proceed with caution.*
+**Disclaimer**: *I have made every effort to ensure the accuracy of this document, but errors may still be present. Feel free to leave any comment or let me know if you spot any errors* 🙂 
 
-<sub>[↥ back to top](#)</sub> 
+<sub>[↥ back to top](#content)</sub> 
 
 ---
 ## 1. Basic Arithmetic and Comparison Operation
@@ -126,7 +126,7 @@ abs()
   | 8 | `or` | Or|
 
 
-<sub>[↥ back to top](#)</sub>
+<sub>[↥ back to top](#content)</sub>
 
 ---
 ## 2. Basic String Operation 
@@ -157,7 +157,7 @@ text[0:9:2]
 
 ``` 
 
-<sub>[↥ back to top](#)</sub>
+<sub>[↥ back to top](#content)</sub>
 
 ---
 ### 2.2 Escape Sequence
@@ -215,7 +215,7 @@ help(c_to_f)
 Help on function c_to_f in module __main__:
 ```
 
-<sub>[↥ back to top](#)</sub>
+<sub>[↥ back to top](#content)</sub>
 
 ---
 ## 3. Logical Operators: `and`, `or`, `not` 
@@ -255,7 +255,7 @@ month and day_of_week
   - [The hierarchy with logical operators](#13-the-hierarchy-with-logical-operators)  
 
 
-<sub>[↥ back to top](#)</sub>
+<sub>[↥ back to top](#content)</sub>
 
 ---
 
@@ -330,7 +330,7 @@ def c_to_f(degree_c):
 
 ``` 
 
-<sub>[↥ back to top](#)</sub>
+<sub>[↥ back to top](#content)</sub>
 
 ---
 ## Other Common Build-In Function

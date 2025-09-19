@@ -1,13 +1,14 @@
 <p align="center">
-  <img src="image/Icon_KNN4.png" alt="Image Place" width="200">
+  <img src="image/Icon_KNN4.png" alt="Image Place" width="250">
 </p>
 
 <h1 align="center">
   DSI ML/AI Course <br>
-  Module 4.1 &ndash; <i>k</i>&#8209;NN Classification with 🐍  
+  Module 4.1 &ndash; <i>k</i>&#8209;NN Classification  
   </h1>
 
 <p align="center">
+  <a href="/README.md">Back to Main Page 🏠</a> •
   <a href="#key-note-and-important-concept">Key Notes</a> •
   <a href="https://tinyurl.com/5ekh22u6">Fly to Day 1 Recording</a> •
   <a href="https://tinyurl.com/mwc9jdzm">Fly to Day 2 Recording</a> •
@@ -52,7 +53,8 @@
 Release:	24.04  
 Kernel Version: **Linux 6.14.0-1-t2-noble**
 
-<sub>[↥ back to top](#content)</sub>  
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub> 
+
 
 ---  
 ## Key Note and Important Concept:
@@ -87,8 +89,8 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 >     - **Cross-Validation**: keep each set of training set a chance to be a validation set --> See [**Section 4**](#42-cross-validation).
 > 9. Data Standardization: centering, scaling ---> See [**Section 3**](#32-variable-standardization).
 > 
-> 10. Imbalance: occurs when one label is much more common than another in a dataset. This is due to *k*NN method inherent a bias from its **majority rules**.  
-**Note**: No consensus on for the ratio. For classifying into 2 variables: 90:10 or 80:20 can be considerred imbalance.
+> 10. #### **Imbalance**: Occurs when one label is much more common than another in a dataset. This is due to *k*NN method inherent a bias from its **majority rules**.  
+>     ⚠️ **Note**: No consensus for the ratio, it depends on domain knowledge. For classifying into 2 variables: 90:10 or 80:20 can be considered imbalance.
 >     
 
 
@@ -124,19 +126,19 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 
 **Disclaimer**: *I have made every effort to ensure the accuracy of this document, but errors may still be present. Feel free to leave comments and I will address them. Thank you!*
 
-<sub>[↥ back to top](#content)</sub>
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub> 
 
 ---
 ![BONUS](image/BONUS.svg)  
 
 1. How to work with **categorical** or **mixed** data (both numeric and categorical) for Classification? 
 
-<sub>[↥ back to top](#content)</sub>
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub> 
 
 ---
 ## 1. Cheat Sheet and ⚔️🛡️ PLAY BOOK 
 
-### 👉🏼 Click the link here to fly to [LCR master cheat sheet and Play Book](/module_4_Ln%20+%20Class%20+%20Resample/DSI-LCR01_master_cheat_sheet..md)
+### 👉🏼 Click the link here to fly to [LCR master cheat sheet and Play Book, More examples!](/module_4_Ln%20+%20Class%20+%20Resample/DSI-LCR01_master_cheat_sheet..md)
 
 
 ### 1.1 Standard workflow 
@@ -149,7 +151,7 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 6. Inspect the result with K-Nearest Neighbors Performance Plot or other alternatives 
 
 
-<sub>[↥ back to top](#content)</sub>
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub> 
 
 ---
 ### 1.2 *k*NN example: Wisconsin Breast Cancer
@@ -270,7 +272,7 @@ plt.show()
 
 ```
 
-<sub>[↥ back to top](#content)</sub>
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub> 
 
 --- 
 
@@ -293,7 +295,7 @@ plt.show()
     - **Preprocessing** (e.g., scaling, encoding, feature extraction)
 
 
-<sub>[↥ back to top](#content)</sub>  
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>   
 
 ---
 ### 2.2 Python Function RECAP
@@ -316,7 +318,7 @@ plt.show()
 2. `range(start_num, end_num, interval)`
 
 
-<sub>[↥ back to top](#content)</sub>
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub> 
 
 ---
 ### 2.3 Panda/Numpy Functions 
@@ -395,7 +397,7 @@ plt.show()
     ```
 
 
-<sub>[↥ back to top](#content)</sub>  
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>   
 <br>
 
 12. `df.iloc[]`: Use help() and type `pd.DataFrame.iloc` for more information
@@ -434,7 +436,7 @@ plt.show()
       - dropna : bool, default True. Do not include columns whose entries are all NaN.
       - normalize : bool, {'all', 'index', 'columns'}, or {0,1}, default False. Normalize by dividing all values by the sum of values.
 
-<sub>[↥ back to top](#content)</sub> 
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
 
 ---
 ### 2.4 scikit-learn Functions
@@ -469,7 +471,7 @@ plt.show()
     scaledX = scale.fit_transform(X)
     ```
 
-<sub>[↥ back to top](#content)</sub> 
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
 
 ---
 3. #### `train_test_split()`  
@@ -492,7 +494,7 @@ plt.show()
     df_train,df_test = train_test_split(df, train_size= 0.75, stratify= df["col_name"])
     ``` 
     
-<sub>[↥ back to top](#content)</sub> 
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
 
 ---
 4. #### `GridSearchCV()`  
@@ -511,7 +513,7 @@ plt.show()
       * error_score : 'raise' or numeric, default=np.nan  
       * return_train_score : bool, default=False
 
-<sub>[↥ back to top](#content)</sub> 
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
 
 ---
 5. #### `KNeighborsClassifier()`:
@@ -552,7 +554,7 @@ plt.show()
       ```
     
 
-<sub>[↥ back to top](#content)</sub>
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub> 
 
 ---
 6. #### Accuracy, Precision, Recall 
@@ -573,7 +575,7 @@ plt.show()
       * zero_division : {"warn", 0.0, 1.0, np.nan}, default="warn"
 
 
-<sub>[↥ back to top](#content)</sub> 
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
 
 ---
 7. #### Cross-Validation  
@@ -620,7 +622,7 @@ plt.show()
 
       * error_score : 'raise' or numeric, default=np.nan | Value to assign to the score if an error occurs in estimator fitting. 
 
-<sub>[↥ back to top](#content)</sub> 
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
 
 --- 
 8. `df.agg()`: Allows to apply a function or a list of function names to be executed along one of the axis of the DataFrame, default 0, which is the index (row) axis.
@@ -636,7 +638,7 @@ plt.show()
   output
   ```
       
-<sub>[↥ back to top](#content)</sub> 
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
 
 ---
 ## 3. *k*-Nearest Neighbors (*k*NN) Method 🗳️ 
@@ -663,7 +665,7 @@ plt.show()
 
 
 
-<sub>[↥ back to top](#content)</sub> 
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
 
 ---  
 ### 3.2 Variable Standardization 
@@ -680,15 +682,12 @@ plt.show()
       
     - This standardization adjusts the data so each variable has a mean of 0 and a standard deviation of 1, allowing the model to consider each variable equally based on its relationship to the outcome rather than its scale.
     
-3. Imbalance
-
-4. Missing Data day 1 [53:00]  
-
-5. More than 3 variables - day 1 [54:30]   
+3. **Imbalance**: Mentioned in the top note section, check [here](#imbalance-occurs-when-one-label-is-much-more-common-than-another-in-a-dataset-this-is-due-to-knn-method-inherent-a-bias-from-its-majority-rules) 
 
 
 
-<sub>[↥ back to top](#content)</sub> 
+
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
 
 ---
 ## 4. Model validation
@@ -734,7 +733,7 @@ Calculation:
 
 <br>    
 
-<sub>[↥ back to top](#content)</sub> 
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
 
 ---
 ### 4.2 Cross Validation
@@ -748,7 +747,7 @@ Calculation:
     4. This ensures that each observation is used for validation exactly once and for training $C - 1$ times.
 
 
-<sub>[↥ back to top](#content)</sub> 
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
 
 ## Resources
 1. [U of T DSI/LCR Repository](https://github.com/UofT-DSI/LCR?tab=readme-ov-file)
