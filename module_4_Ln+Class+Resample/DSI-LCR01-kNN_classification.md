@@ -25,14 +25,14 @@
 * [Key Note and Important Concept](#key-note-and-important-concept)   
 * [1. Cheat Sheet and Play Book](#1-cheat-sheet-and-️️-play-book)
   * [**1.1 Standard workflow** 📕](#11-standard-workflow)
-  * [1.2 *k*-NN example: **Wisconsin Breast Cancer** 🧪🔬 ](#12-knn-example-wisconsin-breast-cancer)
+  * [1.2 *k*NN example: **Wisconsin Breast Cancer** 🧪🔬 ](#12-knn-example-wisconsin-breast-cancer)
 * [2. Most Common Used](#2-most-used-libraries-and-functions)
   * [2.1 Libraries](#21-libraries)  
   * [2.2 Python Function RECAP](#22-python-function-recap) 
   * [2.3 Panda/Numpy Functions](#23-pandanumpy-functions)
   * [2.4 scikit-learn Function](#24-scikit-learn-functions)
 
-* [3. 💡 Concept: *k*-Nearest Neighbors Method(*k*-NN)](#2-k-nearest-neighbors-methodknn)  
+* [3. 💡 Concept: *k*-Nearest Neighbors Method(*k*NN)](#3-k-nearest-neighbors-knn-method-️)  
 * [4. 💡 Concept: Model Validation](#4-model-validation) 
 
 
@@ -640,7 +640,7 @@ plt.show()
 <sub>[↥ back to top](#content)</sub> 
 
 ---
-## 3. K-nearest Neighbors Method(*k*NN) 🗳️ 
+## 3. *k*-Nearest Neighbors (*k*NN) Method 🗳️ 
 
 ### 3.1 Concept  
 
