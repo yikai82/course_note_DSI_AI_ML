@@ -739,12 +739,12 @@ Calculation:
 ### 4.2 Cross Validation
  - **WHY**: If only test once, the outcome is sole dependent on the validation set that is used for tunning and the split is randomness. ---> When rotating the data set, it increases the robustness. 
  - Step:
-    1. Create multiple classifiers by varying parameter values and splitting data into multiple subsets or "folds." 
-    2. Evaluate each classifier on validation results to determine the best parameter value.
-    3. Instead of random splits, use a more systematic approach where each observation is in a validation set only once.    
-    (1) Split the training data into evenly sized chunks.  
-    (2). Iteratively use one chunk as the validation set and the remaining chunks as the training set.  
-    4. This ensures that each observation is used for validation exactly once and for training $C - 1$ times.
+1. Create multiple classifiers by varying parameter values and splitting data into multiple subsets or "folds." 
+2. Evaluate each classifier on validation results to determine the best parameter value.
+3. Instead of random splits, use a more systematic approach where each observation is in a validation set only once.    
+(1) Split the training data into evenly sized chunks.  
+(2). Iteratively use one chunk as the validation set and the remaining chunks as the training set.  
+4. This ensures that each observation is used for validation exactly once and for training $C - 1$ times.
 
 
 <sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
