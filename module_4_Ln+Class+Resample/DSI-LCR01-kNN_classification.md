@@ -96,7 +96,7 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 
 
 > [!IMPORTANT]  
-> 1. [**K-nearest neighbors**](#2-k-nearest-neighbors-methodknn-️) is widely used but not the only method. There are other methods for classification such as *decision trees, support vector machines (SVMs), logistics regression, neural networks*.   
+> 1. [**K-nearest neighbors**](#2-k-nearest-neighbors-methodknn-️) is widely used but not the only method. There are other methods for classification such as ***decision trees***, ***support vector machines (SVMs)***, ***logistics regression***, ***neural networks***.   
 > 2. **Model Evaluation**: ---> [Confusion Matrix]() 
 >      
 > 3. `StandardScaler()`: Performs standardization independently for each feature (column). For the Workflow, see [Section ](#14-scikit-learn).   
@@ -138,7 +138,7 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 ---
 ## 1. Cheat Sheet and ⚔️🛡️ PLAY BOOK 
 
-### 👉🏼 Click the link here to fly to [LCR master cheat sheet and Play Book, More examples!](/module_4_Ln%20+%20Class%20+%20Resample/DSI-LCR01_master_cheat_sheet..md)
+<!-- ### 👉🏼 Click the link here to fly to [LCR master cheat sheet and Play Book, More examples!](/module_4_Ln%20+%20Class%20+%20Resample/DSI-LCR01_master_cheat_sheet..md) -->
 
 
 ### 1.1 Standard workflow 
