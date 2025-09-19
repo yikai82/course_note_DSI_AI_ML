@@ -33,7 +33,7 @@
 ---
 > [!NOTE]  
 > 1. SQL = Structured Query Language  
-> 2. Not sure where to start 😵‍💫😵‍💫 Try lookfing for [++Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-B00000) and **Pin** 📌
+> 2. Not sure where to start 😵‍💫😵‍💫 Try looking for [++Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-B00000) and **Pin** 📌
 
 
 ---
