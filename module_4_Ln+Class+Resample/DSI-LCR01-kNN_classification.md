@@ -2,7 +2,6 @@
   <img src="image/Icon_KNN4.png" alt="Image Place" width="200">
 </p>
 
-#
 <h1 align="center">
   DSI ML/AI Course <br>
   Module 4.1 &ndash; <i>k</i>&#8209;NN Classification with 🐍  
