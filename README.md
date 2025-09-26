@@ -5,8 +5,12 @@
 <h1 align="center">U of T DSI AI/ML Course Note</h1>  
 
 ---
+*I didn’t really make a specific note for **shell**, since I’ve been living in Linux full-time for about 9 months as my MBP2019 went into survival mode 🏥 back in December 2024. I Brought it back to life with* **Linux-T2**✌️🤟🎉
+
+---
 > [!NOTE]
-> 1. I didn’t really make a specific note for **shell**, since I’ve been living in Linux full-time for about 8 months now since my MBP2019 went into survival mode 🏥 back in December 2024. I Brought it back to life with **Linux-T2** ---> check out my repo **Kubuntu-T2**! 
+> 1. 
+<!-- > - check out my repo **Kubuntu-T2** -->
 > 2. 
 
 > [!IMPORTANT]  
