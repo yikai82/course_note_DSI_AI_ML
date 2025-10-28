@@ -122,7 +122,7 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 > 1. ***k*NN classification is based on distance calculation** so the inputs need to be numeric and cannot handle missing value --> check if all the data points are **non-NULL.** 
 > 2. Do **not** use the test set during tuning. *Tuning is part of model training, not model evaluation*.
 > 3. `df_name_new = df_name_ori` creates alias for the dataframe. To copy a new dataframe, use `_.copy()`.
-> 4. 🚨 **Mean imputation** works well **only if** the missing data is random and small size. Moreover, severely reduce the spread could lead to misinterpret the source information and can have significant impact on the accuracy. 
+> 4. ⚠️ **Mean imputation** works well **only if** the missing data is random and small size. Moreover, severely reduce the spread could lead to misinterpret the source information and can have significant impact on the accuracy. 
 
 <br>  
 
