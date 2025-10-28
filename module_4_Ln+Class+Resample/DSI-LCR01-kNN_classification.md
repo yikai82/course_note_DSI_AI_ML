@@ -10,21 +10,22 @@
 <p align="center">
   <a href="/README.md">Back to Main Page 🏠</a> •
   <a href="#key-note-and-important-concept">Key Notes</a> •
-  <a href="https://tinyurl.com/5ekh22u6">Fly to Day 1 Recording</a> •
-  <a href="https://tinyurl.com/mwc9jdzm">Fly to Day 2 Recording</a> •
-  <a href="https://python.datasciencebook.ca/index.html">Textbook</a> •
-  <a href="#resources">Resouces</a><br>
-  <br>
-  **Day 1 live coding started at 1:00 hr mark; Day 2 live coding started at 44:34** <br>
+  <a href="https://youtu.be/IJ7s5GJCkNg">Fly to Day 1 Recording</a> •
+  <a href="https://www.youtube.com/watch?v=UpxyBiJUe6E">Fly to Day 2 Recording</a> •
+  <a href="https://scikit-learn.org/stable/"><b>scikit-learn</b></a> •
+  <a href="https://python.datasciencebook.ca/index.html"><b>Textbook</b></a> •
+  <a href="#resources">Resouces</a><br><br>
+  **Day 1 live coding started at 58:47 mark; Day 2 live coding started at 44:34** <br>
+  **Live code notebook: 09-02 & 09-03**<br>
 </p>
 
 ---
-## The content below was covered during WEEK 1 of the CLR session
+## The content covers Week 1 of the CLR session
 
 ### Content  
 * [Key Note and Important Concept](#key-note-and-important-concept)   
 * [1. Cheat Sheet and Play Book](#1-cheat-sheet-and-️️-play-book)
-  * [**1.1 Standard workflow** 📕](#11-standard-workflow)
+  * [**1.1 Standard Workflow** 📕](#11-standard-workflow)
   * [1.2 *k*NN example: **Wisconsin Breast Cancer** 🧪🔬 ](#12-knn-example-wisconsin-breast-cancer)
 * [2. Most Common Used](#2-most-used-libraries-and-functions)
   * [2.1 Libraries](#21-libraries)  
@@ -62,7 +63,7 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 > 1. Regression vs Classification  
 >     -  **Regression**: to predict **numeric** values ---> *Prediction is an educational guess*.   
 >     -  **Classification**: to predict **categorical** values or labels. 
->     - Both Regression and Classification are **supervised** Machine Learning
+>     - Both Regression and Classification are **supervised learning**, which require labels. 
 > 2. Classification: Creates categorical variables or **labels**. 
 > 3. Prediction vs Inference  
 >     - Prediction:  
@@ -95,27 +96,28 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 
 
 
+---
 > [!IMPORTANT]  
 > 1. [**K-nearest neighbors**](#2-k-nearest-neighbors-methodknn-️) is widely used but not the only method. There are other methods for classification such as ***decision trees***, ***support vector machines (SVMs)***, ***logistics regression***, ***neural networks***.   
 > 2. **Model Evaluation**: ---> [Confusion Matrix]() 
 >      
-> 3. `StandardScaler()`: Performs standardization independently for each feature (column). For the Workflow, see [Section ](#14-scikit-learn).   
+> 3. **`StandardScaler()`**: Performs standardization independently for each feature (column). For the Workflow, see [Section ](#14-scikit-learn).   
 >     - In a normal distribution, the max/min is 3, so if the value is somewhere between +- 3 for an entire column that’s a good way to tell the data is standardized. 
 >
-> 4. `train_test_split()`: Splits the data into training data and testing data. 
+> 4. **`train_test_split()`**: Splits the data into training data and testing data. 
 >     - **Stratify**: Keeps the same proportions of categories (or classes) in your splits as in the full dataset 💡. --> See [**Section 1.4 scikit-learn/`train_test_split`**](#train_test_split)  
 >    
 > 5. Set random seed: When splitting the data between training data and testing data, it is crucial to set random seed. Make sure run `np.random.seed()` before `train_test_split()` --> See [Here](#train_test_split)
 >    
-> 6. `cross_validate()`: See [Here](#cross-validation)
-> 7. `GridSearchCV()`: help to identify the best K value and hold on to it. You dont need to set k = n  
+> 6. **`cross_validate()`**: See [Here](#cross-validation)
+> 7. **`GridSearchCV()`**: help to identify the best K value and hold on to it. You dont need to set k = n  
 > 8. **Missing Data**: is very common and is challenging. Most time, it requires SME to know the data, setting, and collection method.  
 >    - Can be **informative**, should not be ignored 
 >    - *k*NN requires access to the all values in the training data 
 >    - *k*NN with handling the missing data: (1) remove; (2) estimate --> the common method is **mean imputation**, which assumes the missing data is **random**     
 
 
-
+---
 > [!WARNING]  
 > 1. ***k*NN classification is based on distance calculation** so the inputs need to be numeric and cannot handle missing value --> check if all the data points are **non-NULL.** 
 > 2. Do **not** use the test set during tuning. *Tuning is part of model training, not model evaluation*.
@@ -132,8 +134,10 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 ![BONUS](image/BONUS.svg)  
 
 1. How to work with **categorical** or **mixed** data (both numeric and categorical) for Classification? 
+<br>
+<br>
 
-<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub> 
+
 
 ---
 ## 1. Cheat Sheet and ⚔️🛡️ PLAY BOOK 
@@ -141,15 +145,16 @@ Kernel Version: **Linux 6.14.0-1-t2-noble**
 <!-- ### 👉🏼 Click the link here to fly to [LCR master cheat sheet and Play Book, More examples!](/module_4_Ln%20+%20Class%20+%20Resample/DSI-LCR01_master_cheat_sheet..md) -->
 
 
-### 1.1 Standard workflow 
+### 1.1 Standard Workflow 
 
 1. Import data and inspect data
-2. Standardization and data split using `StandardScaler()` + `train_test_split()`
+2. Standardization and data split using `.copy()`, `StandardScaler()` + `train_test_split()`
 3. k parameter tuning using `GridSearchCV()`
 4. `kNN.fit` and `kNN.predict` by initiate `knn = KNeighborsClassifier(*k_tuned*)`
 5. Model evaluation using confusion matrix, accuracy, precision, recall. See [Section 4](#4-model-validation)
 6. Inspect the result with K-Nearest Neighbors Performance Plot or other alternatives 
 
+👉 ⚠️ **Note**: It is a good practice to copy your imported data frame before standardize work!  
 
 <sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub> 
 
@@ -302,7 +307,7 @@ plt.show()
 
 1. **`__.replace({'x' : 'new_x', 'y', 'new_y'})`**: Replaces a specified phrase with another specified phrase. To look up, type `help(str.replace)`.  
 
-    ![IMPORTANT-BLUE](https://img.shields.io/badge/EXAMPLES-496C9C)
+    ![Example-BLUE](https://img.shields.io/badge/EXAMPLES-496C9C)
 
     ```python
     # example 1
@@ -315,7 +320,14 @@ plt.show()
     ```
 
 
-2. `range(start_num, end_num, interval)`
+2. `range(start_num, end_num, interval)`  
+
+    ⚠️ **Note** : The generated list does not include the `end_num`. See the example below: 
+
+    ```python
+    x = range(1,11) # to geneate a list from to 1 to 10, does not include 11 
+    print(list(x)) 
+    ```
 
 
 <sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub> 
@@ -625,7 +637,7 @@ plt.show()
 <sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
 
 --- 
-8. `df.agg()`: Allows to apply a function or a list of function names to be executed along one of the axis of the DataFrame, default 0, which is the index (row) axis.
+8. **`df.agg()`**🏛️: Allows to apply a function or a list of function names to be executed along one of the axis of the DataFrame, default 0, which is the index (row) axis.
   - `df.agg(self, func=None, axis: 'Axis' = 0, *args, **kwargs)`  
   <br>  
 
@@ -645,7 +657,7 @@ plt.show()
 
 ### 3.1 Concept  
 
-1. *k*NN is a simple, supervised machine learning (ML) algorithm that can be used for classification or regression tasks.It finds the "nearest" or "most similar" observations in the training set to predict a new observation's label.---> majority vote!! 🗳️  
+1. ***k*NN is a simple, supervised machine learning (ML) algorithm that can be used for classification or regression tasks.It finds the "nearest" or "most similar" observations in the training set to predict a new observation's label.---> majority vote!!** 🗳️  
    - **"Closest"** can be measured by calculating the straight-line between points, known as distance.  
    - **Sensivity**  
    - K is a predefined number of neighbors considered for classification.   
@@ -653,8 +665,8 @@ plt.show()
      - K = 5 --> default in KNN library
      - K = 300 ---> 
 2. Overfitting vs Underfitting ---> [Day 2 video](https://tinyurl.com/mwc9jdzm) at 31:35(m:ss).
-   - **Overfitting**: When predicting a response, the model fails to incorporate necessary information which causing the prediction is very sensitive to the data **Tip: Think about K=1 is predicting outcome only consider the nearest single data point**
-   - **Underfiting**: oversimplify and *fail the capture the underlying pattern*, as the result the prediction will be based on majority as it just guess the most common answer. **Tip: Everyone gets to vote**s  
+   - **Overfitting**: When predicting a response, the model fails to incorporate necessary information which causing the prediction is very sensitive to the data 💡 **Tip: Think about K=1 is predicting outcome only consider the nearest single data point**
+   - **Underfiting**: oversimplify and *fail the capture the underlying pattern*, as the result the prediction will be based on majority as it just guess the most common answer. 💡 **Tip: Everyone gets to vote**s  
 
 3. To classify a new observation with K-nearest neighbors, follow these steps:  
    (1). Determine the nearest observation to the new observation from the training set.  
@@ -755,4 +767,5 @@ Calculation:
 3. [Python Documentation](https://docs.python.org/3/index.htm)
 4. [Pandas: User Guide](https://pandas.pydata.org/docs/user_guide/index.html)
 5. [NumPy: User Guide](https://numpy.org/doc/stable/user/index.html#user)
+6. [scikit-learn website](https://scikit-learn.org/stable/)
 
