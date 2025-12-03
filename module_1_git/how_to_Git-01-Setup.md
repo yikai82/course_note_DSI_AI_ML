@@ -5,10 +5,8 @@
 <h1 align="center">Module 1 – How to Git - Part 1 🤓 </h1>
 
 <p align="center">
-  🚀 Day 1: Let's Get Ready 🚀 <br>
-  <!-- <a href="#situation-room" style="background-color:#9c4965; color:white; padding:0px 9px; border-radius:4px; font-weight:regular; text-decoration:none;">Situation Room</a> 
-  <a href="#">References</a>
-</p> -->
+  🚀 <b> Day 1: Let's Get Ready 🚀 </b><br>
+<br>
 
 ## System
 
