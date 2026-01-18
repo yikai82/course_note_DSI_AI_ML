@@ -21,7 +21,7 @@
 ---
 ## This note covers the exercise on day 2 and day 3 of the Git/Bash Module
 
-### Content
+## Content
 
 * [Key Note and Important Concept](#key-note-and-important-concept)
 * [1. Create a Local Git Repo and Link It to GitHub (Day 2)](#1-create-a-local-git-repo-and-link-it-to-github-day-2)
