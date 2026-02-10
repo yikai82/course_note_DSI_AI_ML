@@ -23,7 +23,7 @@
 
 ## Content
 
-* [Key Note and Important Concept](#key-note-and-important-concept)
+* [Notes and Important Concepts](#notes-and-important-concepts)
 * [1. Create a Local Git Repo and Link It to GitHub (Day 2)](#1-create-a-local-git-repo-and-link-it-to-github-day-2)
 * [2. Fork a Git Repo from GitHub and Sync to a Local Folder (Day 2)](#2-fork-a-git-repo-from-github-and-sync-to-a-local-folder-day-2)
 * [3. Restore a document from other GitHub Repo (Day 3)](#3-restore-a-document-from-other-github-repo-day-3)
@@ -49,7 +49,7 @@ Release:	24.04 LTS
 Kernel Version: Linux 6.14.0-1-t2-noble
 
 ---
-## Key Note and Important Concept
+## Notes and Important Concepts
 
 > [!NOTE]  
 > 1. Always run **`git fetch`** before using git log for a log comparison as **`git fetch`** will update your local view of the remote history (without changing your working branch) ----> same for `git push/git pull` as git fetch will update the change.  
