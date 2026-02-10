@@ -91,8 +91,8 @@
 </div>  
 
 Release:	24.04 LTS  
-Kernel Version: Linux 6.14.0-1-t2-noble
-
+Kernel Version: Linux 6.14.0-1-t2-noble  
+Hardware: Intel® Core™ i9-9880H CPU @ 2.30GHz, 16 GM RAM
 
 <sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
 
