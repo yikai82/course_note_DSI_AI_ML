@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">
   Git Daily Encounters <br>
-  ♻️ ⚙️ 🔨 = 🤓 </h1>
+  ♻️ ⚙️ 🔨 🤓 </h1>
 
 
 <!-- <p align="center">   

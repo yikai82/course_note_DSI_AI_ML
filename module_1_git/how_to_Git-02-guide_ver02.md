@@ -12,9 +12,8 @@
   </div> -->
   🚀 Day 2 & Day 3: Hands-on Git exercises 🚀 <br>
   <a href="#key-note-and-important-concept">Key Notes</a> •
-  <a href="https://www.youtube.com/watch?v=iYaQLl0zteA">Fly to Course 25/0730</a> •
-  <a href="https://www.youtube.com/watch?v=Urnl03YH6GU">Fly to Course 25/0731/</a> •
   <a href="#situation-room-" style="background-color:#9c4965; color:white; padding:0px 9px; border-radius:4px; font-weight:regular; text-decoration:none;">Situation Room</a> • 
+    <a href="/module_1_git/how_to_Git-03_daily_git_encouters-.md" ><b>Git Daily Encounter ♻️ ⚙️ 🔨 🤓</b></a> • 
   <a href="#-resource">Resource</a>
 </p>
 
@@ -30,7 +29,7 @@
 * [4. Merge/Pull other document from Git Repo (Day 3)](#4-mergepull-other-document-from-git-repo-day-3)
 * [5. Cohort7 -production level madness](#5-cohort7--production-level-madness)
 * **[Situation Room 🚨](#situation-room-)**  <--- got stuck? ⚓😣 check here first 
-* [Looking for just code, check out the **Git Daily Encounter *✍🏼📗***](/module_1_git/how_to_Git-03_daily_git_encouters-.md)
+* [👉 Looking for just code, check out the **Git Daily Encounter ✍🏼📗**](/module_1_git/how_to_Git-03_daily_git_encouters-.md)
 
 ## System
 
