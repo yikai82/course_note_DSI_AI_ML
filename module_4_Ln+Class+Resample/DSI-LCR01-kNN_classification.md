@@ -10,8 +10,6 @@
 <p align="center">
   <a href="/README.md">Back to Main Page 🏠</a> •
   <a href="#key-note-and-important-concept">Key Notes</a> •
-  <a href="https://youtu.be/IJ7s5GJCkNg">Fly to Day 1 Recording</a> •
-  <a href="https://www.youtube.com/watch?v=UpxyBiJUe6E">Fly to Day 2 Recording</a> •
   <a href="https://scikit-learn.org/stable/"><b>scikit-learn</b></a> •
   <a href="https://python.datasciencebook.ca/index.html"><b>Textbook</b></a> •
   <a href="#resources">Resouces</a><br><br>
