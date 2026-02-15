@@ -9,15 +9,13 @@
 <p align="center">
   <!-- [INSERT TEXT]<br> -->
   <a href="#3-join">ALL about JOIN</a> •
-  <a href="https://www.youtube.com/watch?v=E8Mx-L5OvNM">FLY to Day 1 Live Section</a> •
-  <a href="https://www.youtube.com/watch?v=ZFFHCdu7h2s">FLY to Day 2 Live Section</a> •
   <a href="#-resources">Resources</a>
 </p>
 
 
-# Module 2 – SQL Part 1 
+## The note covers Day 1 and Day 2 of the SQL Module
 
-### The content below was covered during the Day 1 and Day 2 of the SQL Live Section. ---> Video link at the top ☝️
+### Content
 
 * [Requirement](#requirement)  
 * [1. SQL Database](#1-sql-database)
@@ -28,12 +26,6 @@
   * [JOIN Diagram](#the-diagram-below-illustrate-the-different-type-of-join)  
 
 <br>  
-
----
-> [!NOTE]  
-> 1. SQL = Structured Query Language  
-> 2. Not sure where to start 😵‍💫😵‍💫 Try looking for [++Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-B00000) and **Pin** 📌
-
 
 ---
 ## System
@@ -51,6 +43,37 @@
 
 Release:	24.04  LTS  
 Kernel Version: Linux 6.14.0-1-t2-noble
+
+
+---
+> [!NOTE]  
+> 1. SQL = Structured Query Language  
+> 2. Not sure where to start 😵‍💫😵‍💫 Try looking for [++Commonly Use!](https://img.shields.io/badge/++_Commonly_Use!-B00000) and **Pin** 📌
+
+
+---
+## 📌 Key notes during the live sections  
+1. Some PKs in the Farmers Market database are composite keys.  
+
+2. **Why do we need Primary Keys and Foreign Keys?**  
+    - **Formalizing the relationship between PKs and FKs ensures that..**
+    - **New records added to tables required....**  
+    - **Hekp to ensure that deleted records do not make data elsewhere meaningless**  
+
+3. Why use market_date as the PK in the vendor_inventory table for Farmers Market DB?  
+
+4. If there is no relationship between tables, you write a query for that. 
+
+5. Health Insurance person whose plan expired vs. his/her claim eligibility
+
+6. **ERD**: The flow is from a FK of a table to a PK of a related table. **Flow from FK --> PK**, we cannot delete the 2nd table until we delete the FK.  
+
+7. **Denormalization** sometimes helps us to build a better ERD -> better design
+
+8. **SQL Concept Map**  
+<br>
+
+<sub>[↥ back to top](#)</sub>
 
 ---
 ## Requirement 
@@ -86,27 +109,13 @@ git pull --rebase upstream main
 git push origin assignment # Push the update to your GitHub fork's assignment branch 
 ```
 
----
-## 📌 Key notes during the live sections  
-1. Some PKs in the Farmers Market database are composite keys.  
-2. **Why do we need Primary Keys and Foreign Keys?**  
-    - **Formalizing the relationship between PKs and FKs ensures that..**
-    - **New records added to tables required....**  
-    - **Hekp to ensure that deleted records do not make data elsewhere meaningless**  
 
-3. Why use market_date as the PK in the vendor_inventory table for Farmers Market DB?  
-4. If there is no relationship between tables, you write a query for that. 
-5. Health Insurance person whose plan expired vs. his/her claim eligibility
-6. **ERD**: The flow is from a FK of a table to a PK of a related table. **Flow from FK --> PK**, we cannot delete the 2nd table until we delete the FK.  
-7. **Denormalization** sometimes helps us to build a better ERD -> better design
-8. **SQL Concept Map**  
-<br>
-
-<sub>[↥ back to top](#)</sub>
 
 ---
 ## 1. SQL Database
+
 ### **Database and Database Management System**
+
 Different Flavours for SQL (What is flavour?)
 - Open Source Systems:
   - Excellent at what they are designed for
