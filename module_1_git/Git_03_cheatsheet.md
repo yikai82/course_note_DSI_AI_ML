@@ -6,10 +6,13 @@
   ♻️ ⚙️ 🔨 🤓 </h1>
 
 
-<!-- <p align="center">   
-  <a href="#-references">References</a>
-</p> -->
+<p align="center">
+  <a href="/module_1_git/how_to_Git-02-guide_ver02.md">📗 Key Notes from Module 2</a> •
+  <a href="#-resource">Resource</a> • 
+  <a href="/README.md"><b> Main Page 🏠 </b></a> •
+</p>
 
+---
 ## Key Notes and Important Concepts
 
 > [!NOTE]  
