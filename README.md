@@ -42,6 +42,14 @@
       </a>
       </div>
     </div>  
+  - <div align="left">
+    <div style="margin: 3px 0;">  
+      <img src="image/Git-Icon-1788C.png" alt="Git" width="20" style="vertical-align: middle; margin-right: 6px;">
+      <a href="/module_1_git/Git_03_cheatsheet.md" style="vertical-align: middle;"> 
+      &nbsp; Git Daily Encounter - Master Cheatsheet  
+      </a>
+      </div>
+    </div>  
 
 
 - Module 2 - SQL  
