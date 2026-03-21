@@ -212,8 +212,61 @@ git push --force-with-lease origin backbone # overwrite local to the origin/remo
 ```
 
 
+<sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  
+
 ---
+### Case 4 - Deal with divergent between local and remote branches with multiple files are overwritten
+
+**Purpose/Situation**: 
+1. You use `git add .` and push every thing on your GitHub. Now you want to **remove what specific files in the GitHub but keep the local copy**
+
+2. In this case, we assume the file that was accidentally uploaded is `.secret` and `.env`. So we will remove both from the internet but keep the local copy
+
+
+
+👉 **Solution**: 
+
+1. Add `.secret` and `.env` into the `.gitignore` first with whatever editor you like to use.  
+2. Used `git rm -cached` 
+
+```bash
+git rm -cached path/to/file
+git commit -m "Remove tracked file"  # you can change whatever comment you would like to add 
+git push origin main
+```
+
+⚠️ **Note:**  Use `git rm path/to/file` will remove it both local and from the Github.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 More to come....🔨 🔧 🛠️ 
+
+---
+
+
+
 
 
 
