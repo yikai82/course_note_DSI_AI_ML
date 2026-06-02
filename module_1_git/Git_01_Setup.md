@@ -6,7 +6,7 @@
 
 <p align="center">
   🚀 <b> Day 1: Let's Get Ready 🚀 </b><br>
-<br>
+<br>v
 
 ## System
 
@@ -92,9 +92,9 @@ My guess is that this is a Git authentication issue with the KDE environment —
 
 To resolve:
 
-```bash
-git config --global credential.helper manager
-```
+  ```bash
+  git config --global credential.helper manager
+  ```
 
 > This tells Git to use Git Credential Manager (GCM), a cross-platform tool maintained by Microsoft.  
 > It manages credentials by delegating to a backend credential store, which must also be configured.
@@ -102,13 +102,68 @@ git config --global credential.helper manager
 
 ### 🔑 Credential Summary:
 
-- `credential.helper=manager`  
+  - `credential.helper=manager`  
   Uses Git Credential Manager (GCM). Required for managing login sessions with GitHub or other providers.
 
-- `credential.credentialStore=secretservice`  
+  - `credential.credentialStore=secretservice`  
   Specifies the backend GCM uses for storing credentials (compatible with GNOME Keyring / KDE Wallet).
 
 ---
+
+### .gitignore
+
+  - It tells Git which files and folders to leave untracked — won't be staged committed or pushed
+
+   - Key rules: 
+      - `*`matches anything within a single directory level
+      - `**` matches across directory levels (e.g. `**/*.log`)
+/ at the start anchors to the repo root (e.g. /dist only ignores the top-level dist/)
+! negates a pattern (un-ignores something previously ignored)
+Lines starting with # are comments
+
+      - `.gitignore` only works on untracked files. If you already committed a file, adding it to .gitignore won't remove it. You'd need to untrack it first:
+
+  - Template  
+
+  ```gitignore
+  # Ignore a specific file
+  secret.env
+  
+  # Ignore a folder
+  node_modules/
+
+  # Ignore all .log files
+  *.log
+
+  # Ignore all .txt files except one
+  *.txt
+  !important.txt
+
+  # Ignore files in a specific folder
+  build/*.js
+
+  # Ignore a directory and everything inside it
+  draft_note/
+  cache/
+
+  # Ignore a directory anywhere is the repo
+  **/draft_note/
+  ```
+
+  ```bash
+  repo/
+  ├── .gitignore
+  ├── draft_note/    # <--- /draft_note/ 
+  ├── notes/
+  │   └── draft_note/  # <--- /note/draft_note/ 
+  └── test.txt
+  ```
+  
+  ⚠️  
+  
+  - Use `folder_name/` to a signle folder at any depth
+  - Use `**/folder_name/` if expect multiple locations
+
 
 
 
