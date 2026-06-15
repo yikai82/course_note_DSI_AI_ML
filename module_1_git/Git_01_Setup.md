@@ -114,7 +114,15 @@ To resolve:
 
   - It tells Git which files and folders to leave untracked — won't be staged committed or pushed
 
-   - Key rules: 
+  - 📌 .gitignore **only works on untracked** files. If you already committed a file, adding it to .gitignore won't remove it. You'd need to untrack it first:
+
+    ```bash
+    git rm --cached <filename>
+    ```  
+    
+  - GitHub maintains a handy collection of ready-made .gitignore templates for common languages and frameworks [here](github.com/github/gitignore).     
+
+  - Key rules: 
       - `*`matches anything within a single directory level
       - `**` matches across directory levels (e.g. `**/*.log`)
 / at the start anchors to the repo root (e.g. /dist only ignores the top-level dist/)
