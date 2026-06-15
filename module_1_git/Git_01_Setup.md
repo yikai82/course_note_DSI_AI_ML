@@ -45,6 +45,7 @@ git config --global credential.helper manager
 ```
 
 ### Let me explain why I add the last two commands for my Linux
+
 > After successfully login and running `git credential-manager github list`, I see the following error:
 >
 > ```bash
@@ -102,41 +103,66 @@ To resolve:
 
 ### 🔑 Credential Summary:
 
-  - `credential.helper=manager`  
-  Uses Git Credential Manager (GCM). Required for managing login sessions with GitHub or other providers.
+- `credential.helper=manager`  
+Uses Git Credential Manager (GCM). Required for managing login sessions with GitHub or other providers.
 
-  - `credential.credentialStore=secretservice`  
-  Specifies the backend GCM uses for storing credentials (compatible with GNOME Keyring / KDE Wallet).
+- `credential.credentialStore=secretservice`  
+Specifies the backend GCM uses for storing credentials (compatible with GNOME Keyring / KDE Wallet).
 
 ---
 
 ### .gitignore
 
-  - It tells Git which files and folders to leave untracked — won't be staged committed or pushed
+- It tells Git which files and folders to leave untracked — won't be staged committed or pushed
 
-  - 📌 .gitignore **only works on untracked** files. If you already committed a file, adding it to .gitignore won't remove it. You'd need to untrack it first:
+- 📌 .gitignore **only works on untracked** files. If you already committed a file, adding it to .gitignore won't remove it. You'd need to untrack it first:
 
-    ```bash
-    git rm --cached <filename>
-    ```  
-    
-  - GitHub maintains a handy collection of ready-made .gitignore templates for common languages and frameworks [here](github.com/github/gitignore).     
+  ```bash
+  git rm --cached <filename>
+  ```  
 
-  - Key rules: 
-      - `*`matches anything within a single directory level
-      - `**` matches across directory levels (e.g. `**/*.log`)
-/ at the start anchors to the repo root (e.g. /dist only ignores the top-level dist/)
-! negates a pattern (un-ignores something previously ignored)
-Lines starting with # are comments
+- GitHub maintains a handy collection of ready-made .gitignore templates for common languages and frameworks [here](github.com/github/gitignore).     
 
-      - `.gitignore` only works on untracked files. If you already committed a file, adding it to .gitignore won't remove it. You'd need to untrack it first:
+- **Key rules**: 
+  - `*`matches anything within a single directory level
+  - `**` matches across directory levels (e.g. `**/*.log`)  
+  - / at the start anchors to the repo root (e.g. /dist only ignores the top-level dist/)
+  - ! negates a pattern (un-ignores something previously ignored)
+  - Lines starting with # are comments
 
-  - Template  
+- `.gitignore` only works on untracked files. If you already committed a file, adding it to .gitignore won't remove it. You'd need to untrack it first:
+  ```bash
+  git rm --cached filename.ext
+  ```
+
+- How to use **`.gitignore`**: 
+
+  - Assuming the following folder structure: 
+
+  ```bash
+  repo/
+  ├── .gitignore
+  ├── draft_note/    # <--- /draft_note/ 
+  ├── notes/
+  │   └── draft_note/  # <--- /note/draft_note/ 
+  └── test.txt
+  ```
+  - Use `folder_name/` to a signle folder at any depth
+  - Use `**/folder_name/` if expect multiple locations
+
 
   ```gitignore
+  ## .gitignore
+
   # Ignore a specific file
   secret.env
   
+  # Ignore anything starting with 'draft'
+  draft*
+
+  # Ignore anything containing 'draft' anywhere in the name
+  *draft*
+
   # Ignore a folder
   node_modules/
 
@@ -158,19 +184,9 @@ Lines starting with # are comments
   **/draft_note/
   ```
 
-  ```bash
-  repo/
-  ├── .gitignore
-  ├── draft_note/    # <--- /draft_note/ 
-  ├── notes/
-  │   └── draft_note/  # <--- /note/draft_note/ 
-  └── test.txt
-  ```
-  
-  ⚠️  
-  
-  - Use `folder_name/` to a signle folder at any depth
-  - Use `**/folder_name/` if expect multiple locations
+- Check [here](/.gitignore) for the current `.gitignore` in this repo.  
+
+
 
 
 

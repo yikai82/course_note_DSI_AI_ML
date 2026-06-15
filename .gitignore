@@ -55,7 +55,13 @@ Thumbs.db         # Windows
 # =========================================
 # Temporary Specific files
 # =========================================
+*env*
 *bkup*.md
-module_2_sql/DSI-sql-Part_2.md
-module_2_sql/DSI-sql-Part_3.md
-module_2_sql/DSI-sql-Part_4.md
+.vscode
+module_2*/
+module_3*/
+module_4*/
+module_5*/
+module_6*/
+module_7*/
+
