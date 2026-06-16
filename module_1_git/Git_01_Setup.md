@@ -119,6 +119,20 @@ Specifies the backend GCM uses for storing credentials (compatible with GNOME Ke
 
   ```bash
   git rm --cached <filename>
+
+  ## example 1: remove only one file 
+  
+  git rm --cached path/to/file.bin
+  git commit -m "Stop tracking binary file"
+  git push
+
+
+  ## example 2: remove multiple files
+
+  git rm -r --cached folder/*.bin
+  git add .
+  git commit -m "Apply .gitignore rules"
+  git push
   ```  
 
 - GitHub maintains a handy collection of ready-made .gitignore templates for common languages and frameworks [here](github.com/github/gitignore).     
