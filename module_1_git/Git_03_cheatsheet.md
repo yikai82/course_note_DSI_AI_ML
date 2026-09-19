@@ -165,9 +165,49 @@ git push -u origin [branch.name]  # -u: set upstream; push local branch and trac
 git remote -vv    # confirm the setting is updated
 ```
 ⚠️ **Note:**  
-You’d only need `-u` again only if: 
-- You’re pushing a brand-new branch for the first time, or
-- You deleted and recreated the branch upstream.
+1. You’d only need `-u` again only if: 
+    - You’re pushing a brand-new branch for the first time, or
+    - You deleted and recreated the branch upstream.
+
+2. You may encounter folowing error if the remote branch has commit that is much older when you try to push/pull
+
+```bash
+$ git push -u origin main
+To https://github.com/yikai82/CARNA.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/yikai82/CARNA.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+$ git pull --rebase origin main
+From https://github.com/yikai82/CARNA
+ * branch            main       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+```
+<br>
+👉 **Solution**: Run the following commend  
+
+```bash
+git rebase --abort
+git status 
+git log --oneline --decorate --graph --all --max-count=15
+git fetch origin
+git merge origin/main --allow-unrelated-histories  # this allow merging differen divergent branch as long as there is no files will be overwritten after merging. 
+git push -u origin main # push local to remote 
+```
 
 
 <sub>[↥ back to top](#content)&emsp;|&emsp;[Return Main Page 🏠](/README.md) </sub>  

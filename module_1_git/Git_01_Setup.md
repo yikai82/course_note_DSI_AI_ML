@@ -133,6 +133,14 @@ Specifies the backend GCM uses for storing credentials (compatible with GNOME Ke
   git add .
   git commit -m "Apply .gitignore rules"
   git push
+
+
+  ## Tip: List the location of specifie files so we know if we need to use -r (recursively)
+  # Syntax: find [path] [options] [expression]
+
+  find . -type f -name ".directory"  # search file with its named '.directory' in current folder 
+  -type f: files 
+
   ```  
 
 - GitHub maintains a handy collection of ready-made .gitignore templates for common languages and frameworks [here](github.com/github/gitignore).     
